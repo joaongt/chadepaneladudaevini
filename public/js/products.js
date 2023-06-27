@@ -2,7 +2,7 @@ const products = [
     {
       id: 1,
       name: 'Caixa Organizadora Preta',
-      image: '/images/cesto-preto.jpg',
+      image: '/images/cestopreto.jpg',
       price: 46.99,
       url: 'https://shp.ee/5awwx48',
       mkp: 'Shopee',
@@ -11,7 +11,7 @@ const products = [
     {
       id: 2,
       name: 'Cesto Roupa Suja Marrom',
-      image: '/images/cesto-marrom.jpg',
+      image: '/images/cestomarrom.jpg',
       price: 88.00,
       url: 'https://shp.ee/r3s88a8',
       mkp: 'Shopee',
@@ -20,7 +20,7 @@ const products = [
     {
       id: 3,
       name: 'Almofada branca',
-      image: '/images/travesseiro-branco.jpg',
+      image: '/images/travesseirobranco.jpg',
       price: 30.15,
       url: 'https://shp.ee/5vm59w8',
       mkp: 'Shopee',
@@ -29,7 +29,7 @@ const products = [
     {
       id: 4,
       name: 'Kit 2 Capas de almofadas personalizadas',
-      image: '/images/travesseiro-personalizado.jpg',
+      image: '/images/travesseiropersonalizado.jpg',
       price: 39.00,
       url: 'https://shp.ee/tvnrxb8',
       mkp: 'Shopee',
@@ -38,7 +38,7 @@ const products = [
     {
       id: 5,
       name: 'Kit Peseira Casal e 2 Capas de Almofadas',
-      image: '/images/roupa-de-cama.jpg',
+      image: '/images/roupadecama.jpg',
       price: 89.90,
       url: 'https://shp.ee/43ewv58',
       mkp: 'Shopee',
@@ -326,7 +326,7 @@ const products = [
     {
       id: 37,
       name: 'Banqueta Wood Madeira Maciça',
-      image: '/images/banq.jpg.png',
+      image: '/images/banq.png',
       price: 109.00,
       url: 'https://loja-carrera.com/products/solid-wood-kitchen-bar-chair-high-stool-nordic-home-bar-chair-backrest-black-restaurant-cadeiras-de-espera-dining-chair-eb5by?gclid=CjwKCAjw-IWkBhBTEiwA2exyOyzgqSGoX02SGTQ7JFSB4Wojdr0aqAykR3hJ1q_A4BfJBycxRceD5hoCDpsQAvD_BwE',
       mkp: 'Loja Carrera',
