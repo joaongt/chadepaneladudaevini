@@ -45,7 +45,6 @@
 
 body{
   background-color: #E8E8E8;
-  border-radius: 6em;
 }
 
 .grid{
@@ -229,6 +228,40 @@ label[for="filter-marketplace"] {
   margin-left: 20px;
 }
 
+.footer {
+  margin-top: 5em;
+  background-color: #363636;
+  padding: 20px;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #f2f2f2;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-contact a {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.whatsapp-contact img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+
 /* Styles for iPhone 11 */
 @media (max-width: 414px) {
 
@@ -284,3 +317,4 @@ label[for="filter-marketplace"] {
     gap: 0.3em;
   }  
 }
+
