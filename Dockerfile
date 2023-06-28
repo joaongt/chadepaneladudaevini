@@ -1,20 +1,20 @@
-# Definir a imagem base
-FROM node:14
+# Use an official Node.js runtime as a parent image
+FROM node:lts
 
-# Definir o diretório de trabalho dentro do container
+# Set the working directory to /app
 WORKDIR /app
 
-# Copiar os arquivos do projeto para o diretório de trabalho
-COPY package.json package-lock.json /app/
+# Copy package.json and package-lock.json to /app
+COPY package*.json ./
 
-# Instalar as dependências do projeto
-RUN npm ci
+# Install dependencies
+RUN npm install
 
-# Copiar todo o código fonte para o diretório de trabalho
-COPY . /app
+# Copy the current directory contents to /app
+COPY . .
 
-# Expor a porta do aplicativo
+# Expose port 3000
 EXPOSE 3000
 
-# Comando para iniciar o aplicativo
-CMD ["npm", "start"]
+# Start the application
+CMD [ "npm", "start" ]
