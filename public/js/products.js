@@ -2,7 +2,7 @@ const products = [
     {
       id: 1,
       name: 'Caixa Organizadora Preta',
-      image: '/images/cestopreto.jpg',
+      image: '/images/cestapreta.jpg',
       price: 46.99,
       url: 'https://shp.ee/5awwx48',
       mkp: 'Shopee',
