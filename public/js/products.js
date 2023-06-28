@@ -333,6 +333,7 @@ const products = [
       status: false
     },
   ];
+
   
 const productContainer = document.getElementById('product-container');
 
@@ -368,7 +369,7 @@ function createProductElement(product) {
   pop.appendChild(productName);
 
   const productPrice = document.createElement('p');
-  productPrice.textContent = `R$ ${product.price.toFixed(2)}`;
+  productPrice.textContent = `${product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
   productPrice.className = 'product-price';
   pop.appendChild(productPrice);
 

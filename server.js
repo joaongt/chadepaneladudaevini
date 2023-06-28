@@ -5,10 +5,18 @@ const app = express();
 const port = 3000;
 
 // Express middleware
-app.use(express.json())
+app.use(express.json());
 app.use(express.static('public'));
 
-app.engine('handlebars', exphbs.engine());
+const handlebars = exphbs.create({
+  helpers: {
+    formatCurrency: function (value) {
+      return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+  }
+});
+
+app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.urlencoded({ extended: false }));
@@ -37,7 +45,7 @@ app.get('/pix', (req, res) => {
     valorArrecadado: 0, // Valor já arrecadado
   };
 
-  const chavePix = 'Cpf: 01855318652'; // Substitua pela chave PIX dos noivos
+  const chavePix = '01855318652'; // Substitua pela chave PIX dos noivos
 
   // Renderizando a página do PIX e passando os dados da geladeira
   res.render('pages/pix', { 
@@ -52,7 +60,6 @@ app.get('/pix', (req, res) => {
 app.locals.calculateProgressWidth = (valorArrecadado, valorTotal) => {
   return (valorArrecadado / valorTotal) * 100;
 };
-
 
 app.listen(port, () => {
   console.log(`Servidor iniciado em http://localhost:${port}`);

@@ -1,11 +1,14 @@
 <h1>PIX DOS NOIVOS</h1>
 
+<p>Com o pix dos noivos você pode está podendo contribuir para arrecadar o valor da geladeira</p>
+
 <h3>Geladeira Consul CRM56HK</h3>
 <div class="info-center">
     <img id="geladeira" src="/images/gela.jpg" alt="AA">
 </div>
 <div class="progress">
-    <p>Valor do item: R$ {{geladeira.valorTotal}}</p>
+    <!-- Exibição do valor total -->
+    <p>Valor do item: {{formatCurrency geladeira.valorTotal}}</p>
 
 
 
@@ -13,12 +16,33 @@
         <div class="progress-bar-fill"
             style="width: {{calculateProgressWidth geladeira.valorArrecadado geladeira.valorTotal}}%"></div>
     </div>
-    <p class="progress-bar-label">Valor arrecadado até o momento: R$ {{geladeira.valorArrecadado}}</p>
+    <!-- Exibição do valor arrecadado -->
+    <p>Valor arrecadado: {{formatCurrency geladeira.valorArrecadado}}</p>
 </div>
 
 <div class="info-center">
     <div class="pix-info">
         <h3>Chave PIX dos Noivos</h3>
-        <p>{{chavePix}}</p>
+        <div class="row">
+            <p>CPF: {{chavePix}}</p>
+            <button id="copyPixButton" onclick="copyPixToClipboard()"><i class='bx bx-copy'></i></button>
+        </div>
     </div>
 </div>
+
+<script>
+function copyPixToClipboard() {
+  // Seleciona o texto da chave PIX
+  const pixInput = document.createElement('input');
+  pixInput.value = "{{chavePix}}";
+  document.body.appendChild(pixInput);
+  pixInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(pixInput);
+
+  // Atualiza o texto do botão para indicar que foi copiado
+  const copyButton = document.getElementById('copyPixButton');
+  copyButton.innerHTML = '<i class="bx bxs-copy"></i>';
+  copyButton.disabled = true;
+}
+</script>
