@@ -171,6 +171,41 @@ body {
   margin-right: 5px;
 }
 
+/* Estilo para o botão de cópia */
+#copyCepInput {
+  background-color: #b237ae;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: .5em;
+}
+
+#copyCepInput:hover {
+  background-color: #782683;
+}
+
+#copyCepInput:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+/* Estilo para o ícone de cópia */
+.fa-copy {
+  margin-right: 5px;
+}
+
+.bx{
+  background-color: transparent;
+}
+
+.fa-check {
+  margin-right: 5px;
+}
+
 
 /* Styles for iPhone 11 */
 @media (max-width: 414px) {
