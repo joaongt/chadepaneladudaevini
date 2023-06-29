@@ -48,9 +48,9 @@ app.get('/pix', (req, res) => {
   const chavePix = '01855318652'; // Substitua pela chave PIX dos noivos
 
   // Renderizando a página do PIX e passando os dados da geladeira
-  res.render('pages/pix', { 
-    geladeira, 
-    chavePix,   
+  res.render('pages/pix', {
+    geladeira,
+    chavePix,
     titulo: "Pix dos Noivos",
     estilo: "pix.css"
   });

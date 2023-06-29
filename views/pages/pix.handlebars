@@ -31,18 +31,18 @@
 </div>
 
 <script>
-function copyPixToClipboard() {
-  // Seleciona o texto da chave PIX
-  const pixInput = document.createElement('input');
-  pixInput.value = "{{chavePix}}";
-  document.body.appendChild(pixInput);
-  pixInput.select();
-  document.execCommand('copy');
-  document.body.removeChild(pixInput);
+    function copyPixToClipboard() {
+        // Seleciona o texto da chave PIX
+        const pixInput = document.createElement('input');
+        pixInput.value = "{{chavePix}}";
+        document.body.appendChild(pixInput);
+        pixInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(pixInput);
 
-  // Atualiza o texto do botão para indicar que foi copiado
-  const copyButton = document.getElementById('copyPixButton');
-  copyButton.innerHTML = '<i class="bx bxs-copy"></i>';
-  copyButton.disabled = true;
-}
+        // Atualiza o texto do botão para indicar que foi copiado
+        const copyButton = document.getElementById('copyPixButton');
+        copyButton.innerHTML = '<i class="bx bxs-copy"></i>';
+        copyButton.disabled = true;
+    }
 </script>
