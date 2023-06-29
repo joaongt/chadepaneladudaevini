@@ -82,10 +82,10 @@ h3 {
 .progress {
   display: flex;
   flex-direction: column;
-  gap: .5em;
+  gap: .2em;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4.3em;
+  margin-bottom: 2.3em;
 }
 
 .progress-bar {
@@ -109,7 +109,6 @@ h3 {
 .progress-bar-label {
   color: #363636;
   font-weight: bold;
-  margin-bottom: 10px;
 
 }
 
@@ -120,7 +119,7 @@ h3 {
 }
 
 .pix-info {
-  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 1em;
   background-color: #f8f8f8;
   padding: 20px;

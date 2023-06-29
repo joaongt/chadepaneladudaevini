@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 // Rotas e manipulação de dados serão adicionadas a partir daqui
 app.get('/', (req, res) => {
   res.render('pages/index', {
-    titulo: "Index",
+    titulo: "Chá de Panela | Duda & Vini",
     estilo: "index.css"
   });
 });

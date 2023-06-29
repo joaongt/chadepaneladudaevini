@@ -363,4 +363,19 @@ body {
     margin: 0;
     gap: 0.3em;
   }
+
+  select {
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  select:hover,
+  select:focus {
+    border-color: #999;
+    /* Ajuste a cor conforme necessário */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Ajuste conforme necessário */
+  }
 }
