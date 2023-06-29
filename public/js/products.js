@@ -11,7 +11,7 @@ const products = [
     {
       id: 2,
       name: 'Cesto Roupa Suja Marrom',
-      image: '/images/cestomarrom.jpg',
+      image: '/images/cestamarrom.jpg',
       price: 88.00,
       url: 'https://shp.ee/r3s88a8',
       mkp: 'Shopee',
@@ -83,7 +83,7 @@ const products = [
     {
       id: 10,
       name: 'Liquidificador Electrolux 700w com Copo de Vidro',
-      image: '/images/liquidificador.JPG',
+      image: '/images/liquidificador.jpg',
       price: 369.00,
       url: 'https://loja.electrolux.com.br/liquidificador-electrolux-700w-com-copo-de-vidro-tecnologia-truflow-experience-ebs30/p',
       mkp: 'Electrolux',
@@ -119,7 +119,7 @@ const products = [
     {
       id: 14,
       name: 'Varal de Parede Recolhível Seca Fácil',
-      image: '/images/varal.JPG',
+      image: '/images/varal.jpg',
       price: 49.99,
       url: 'https://www.amazon.com.br/Varal-Parede-Recolh%C3%ADvel-Seca-F%C3%A1cil/dp/B076QGDVSL/ref=asc_df_B076QGDVSL/?tag=googleshopp06-20&linkCode=df0&hvadid=379755604079&hvpos=&hvnetw=g&hvrand=9949169672966137105&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-811912834025&psc=1',
       mkp: 'Amazon',
@@ -146,7 +146,7 @@ const products = [
     {
       id: 17,
       name: 'Jogo De Panelas 8 Peças Ceramic',
-      image: '/images/panela.JPG',
+      image: '/images/panela.jpg',
       price: 731.83,
       url: 'https://www.casasbahia.com.br/jogo-de-panelas-8-pecas-ceramic-life-smart-plus-cinza-brinox/p/1537818723',
       mkp: 'Casas Bahia',
@@ -226,10 +226,10 @@ const products = [
     },
     {
       id: 26,
-      name: 'Aparador Buffet 4 Portas Veneza Multimóveis Branco',
-      image: '/images/aparador.jpg',
-      price: 109.90,
-      url: 'https://www.madeiramadeira.com.br/aparador-buffet-4-portas-veneza-multimoveis-branco-3521297.html',
+      name: 'Rack para TV até 70 Polegadas 220cm 3 Gavetas',
+      image: '/images/rack.jpg',
+      price: 399.90,
+      url: 'https://www.madeiramadeira.com.br/rack-para-tv-ate-70-polegadas-220cm-3-gavetas-retro-manchester-yescasa-795198.html?origem=pla-795198',
       mkp: 'madeiramadeira',
       status: false
     },
@@ -325,11 +325,182 @@ const products = [
     },
     {
       id: 37,
-      name: 'Banqueta Wood Madeira Maciça',
-      image: '/images/banq.png',
-      price: 109.00,
-      url: 'https://loja-carrera.com/products/solid-wood-kitchen-bar-chair-high-stool-nordic-home-bar-chair-backrest-black-restaurant-cadeiras-de-espera-dining-chair-eb5by?gclid=CjwKCAjw-IWkBhBTEiwA2exyOyzgqSGoX02SGTQ7JFSB4Wojdr0aqAykR3hJ1q_A4BfJBycxRceD5hoCDpsQAvD_BwE',
-      mkp: 'Loja Carrera',
+      name: 'Mesa De Passar Extra Forte C/Passa Mangas Prata - Utilaço',
+      image: '/images/pass.jpg',
+      price: 177.90,
+      url: 'https://www.amazon.com.br/PASSAR-EXTRA-FORTE-PASSA-MANGAS/dp/B09BWYSNPY/ref=asc_df_B09BWYSNPY/?tag=googleshopp06-20&linkCode=df0&hvadid=379736754157&hvpos=&hvnetw=g&hvrand=16044077227179969590&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-1456287705521&psc=1',
+      mkp: 'Amazon',
+      status: false
+    },
+    {
+      id: 38,
+      name: 'Travesseiro Nasa Metalasse',
+      image: '/images/travv.jpg',
+      price: 45.99,
+      url: 'https://shopee.com.br/Travesseiro-Nasa-Metalasse-9-cm-100-Poli%C3%A9ster-Baixo-i.407252023.12903263490',
+      mkp: 'Shopee',
+      status: false
+    },
+    {
+      id: 39,
+      name: 'Kit 5 Toalha de Banho Preta',
+      image: '/images/toall.jpg',
+      price: 69.90,
+      url: 'https://shopee.com.br/Kit-5-Toalha-de-Banho-Preta-100-Algod%C3%A3o-Atacado-i.586394639.20444909362',
+      mkp: 'Shopee',
+      status: false
+    },
+    {
+      id: 40,
+      name: 'Lixeira Grande 30L Preta',
+      image: '/images/lixo.jpg',
+      price: 70.13,
+      url: 'https://shopee.com.br/product/677688213/23903248027?gbraid=0AAAAACoEtRlTl-kE8mRthi4icY7Fr2Y2y&gclid=EAIaIQobChMIg-eC55zk_wIV4-BcCh3-twmoEAQYGiABEgLfqPD_BwE',
+      mkp: 'Shopee',
+      status: false
+    },
+    {
+      id: 41,
+      name: 'Escorredor De Pratos Louça Em Bambu',
+      image: '/images/prat.jpg',
+      price: 48.97,
+      url: 'https://shopee.com.br/Escorredor-De-Pratos-Lou%C3%A7a-Em-Bambu-Natural-Madeira-Cozinha-i.946786498.20173082340',
+      mkp: 'Shopee',
+      status: false
+    },
+    {
+      id: 42,
+      name: 'Escorredor Lavador De Alimentos Em Aço Inox',
+      image: '/images/esco.jpg',
+      price: 19.70,
+      url: 'https://shopee.com.br/Escorredor-Lavador-De-Arroz-Macarr%C3%A3o-Alimentos-Em-A%C3%A7o-Inox-i.946786498.18475455605',
+      mkp: 'Shopee',
+      status: false
+    },
+    {
+      id: 43,
+      name: 'Kit Colcha Matelassê Dupla Face Platinum Thais',
+      image: '/images/cam.jpg',
+      price: 429.90,
+      url: 'https://santistadecora.com.br/pr/kit-colcha-matelasse-dupla-face-platinum-thais/SA200KCQZ1THAIS',
+      mkp: 'santistadecora',
+      status: false
+    },
+    {
+      id: 44,
+      name: 'Toalha 100% Algodão Prata Mike',
+      image: '/images/banho.jpg',
+      price: 14.90,
+      url: 'https://santistadecora.com.br/pr/toalha-100-algodao-prata-mike/SANPRTROZMI8211',
+      mkp: 'santistadecora',
+      status: false
+    },
+    {
+      id: 45,
+      name: 'Coberdrom Canefleece Queen Canelado/Plush Aveludado - Cinza',
+      image: '/images/edre.jpg',
+      price: 199.90,
+      url: 'https://decoramaiscasa.bubbstorelive.com.br/coberdrom-canefleece-queen-caneladoplush-aveludado-cinza/p',
+      mkp: 'Decora Mais Casa',
+      status: false
+    },
+    {
+      id: 46,
+      name: 'Cobre Leito Chic Queen Xale/Peseira C/ Pedraria 08 Peças - Cinza',
+      image: '/images/edree.jpg',
+      price: 314.90,
+      url: 'https://www.decoramaiscasa.com.br/cobre-leito-chic-queen-xalepeseira-c-pedraria-08-pecas-cinza/p',
+      mkp: 'Decora Mais Casa',
+      status: false
+    },
+    {
+      id: 47,
+      name: 'Robô Aspirador De Pó Electrolux Home Power',
+      image: '/images/robo.jpg',
+      price: 645.99,
+      url: 'https://www.magazineluiza.com.br/robo-aspirador-de-po-electrolux-home-power-experience-erb10/p/cc5a7b78e9/ep/eprb/',
+      mkp: 'Magazine Luiza',
+      status: false
+    },
+    {
+      id: 48,
+      name: 'Jogo de Panelas New York Casambiente 8 peças',
+      image: '/images/panelinhas.jpg',
+      price: 497.11,
+      url: 'https://www.magazineluiza.com.br/jogo-de-panelas-new-york-casambiente-8-pecas-com-revestimento-antiaderente-ceramico/p/baa5883k0j/ud/cjpn/',
+      mkp: 'Magazine Luiza',
+      status: false
+    },
+    {
+      id: 49,
+      name: 'Caldeirão Panela Hotel Industrial N24 de Alumínio',
+      image: '/images/cald.jpg',
+      price: 65.01,
+      url: 'https://shopee.com.br/Caldeir%C3%A3o-Panela-Hotel-Industrial-N24-de-Alum%C3%ADnio-i.418199465.20627946483',
+      mkp: 'Shopee',
+      status: false
+    },
+    {
+      id: 50,
+      name: 'Balcão Buffet 3 Portas e 1 Gaveta Duna Mavaular',
+      image: '/images/balc.jpg',
+      price: 637.55,
+      url: 'https://www.magazineluiza.com.br/balcao-buffet-3-portas-e-1-gaveta-duna-mavaular/p/aja52h2303/mo/otmo/',
+      mkp: 'Magazine Luiza',
+      status: false
+    },
+    {
+      id: 51,
+      name: 'Balcão Buffet 3 Portas e 1 Gaveta Duna Mavaular',
+      image: '/images/balc.jpg',
+      price: 637.55,
+      url: 'https://www.magazineluiza.com.br/balcao-buffet-3-portas-e-1-gaveta-duna-mavaular/p/aja52h2303/mo/otmo/',
+      mkp: 'Magazine Luiza',
+      status: false
+    },
+    {
+      id: 52,
+      name: 'Tabua de Vidro para Carnes Temperado Super Resistente',
+      image: '/images/tabu.jpg',
+      price: 27.97,
+      url: 'https://shopee.com.br/Tabua-de-Vidro-para-Carnes-Temperado-Inquebr%C3%A1vel-Super-Resistente-e-Super-Higi%C3%AAnicas-i.201676730.19545342736',
+      mkp: 'Shopee',
+      status: false
+    },
+    {
+      id: 53,
+      name: 'Sanduicheira e Grill Britânia BGR15PI Antiaderente 750W',
+      image: '/images/sand.jpg',
+      price: 99.90,
+      url: 'https://britania.com.br/sanduicheira-e-grill-britania-bgr15pi-revestimento-em-ceramica-66701167/p',
+      mkp: 'Britânia',
+      status: false
+    },
+    {
+      id: 54,
+      name: 'Mini Processador de Alimentos Britânia 2P',
+      image: '/images/mini.jpg',
+      price: 99.90,
+      url: 'https://britania.com.br/mini-processador-de-alimentos-britania-2pbritania/p',
+      mkp: 'Britânia',
+      status: false
+    },
+    {
+      id: 55,
+      name: 'Batedeira Philco Paris Inox Duo Mixer Turbo 350W - Preta',
+      image: '/images/battt.jpg',
+      price: 129.90,
+      url: 'https://www.casasbahia.com.br/batedeira-philco-paris-inox-duo-mixer-turbo-2-com-4-velocidades-e-350w-preta/p/55010954',
+      mkp: 'Casas Bahia',
+      status: false
+    },
+    {
+      id: 56,
+      name: 'Conjunto de Assadeiras Retangulares Tramontina - 3 Peças',
+      image: '/images/ass.jpg',
+      price: 172.00,
+      url: 'https://www.casasbahia.com.br/conjunto-de-assadeiras-retangulares-tramontina-brasil-com-revestimento-antiaderente-starflon-t1-grafite-3-pecas/p/55003378',
+      mkp: 'Casas Bahia',
       status: false
     },
   ];
@@ -378,6 +549,11 @@ function createProductElement(product) {
   productMkp.className = 'product-mkp';
   pop.appendChild(productMkp);
 
+  const productCod = document.createElement('span');
+  productCod.textContent = `cod: ${product.id}`;;
+  productCod.className = 'product-cod';
+  pop.appendChild(productCod);
+
   // Verifica se o produto foi favoritado
   let isFavorite = localStorage.getItem(`favorite-${product.id}`) === 'true';
   if (isFavorite) {
@@ -405,7 +581,7 @@ function createProductElement(product) {
     a.appendChild(statusOverlay);
 
     const statusText = document.createElement('span');
-    statusText.textContent = 'Comprado';
+    statusText.textContent = 'JÁ ADIQUIRIDO';
     statusText.className = 'status-text';
     statusOverlay.appendChild(statusText);
   }

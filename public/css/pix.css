@@ -45,14 +45,6 @@
     text-decoration: underline;
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin-top: 2em;
-}
 
 h1 {
     color: #000000;
@@ -183,8 +175,23 @@ h3 {
   }
   
 
-.footer {
-    margin-top: 5em;
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  .footer {
     background-color: #363636;
     padding: 20px;
     color: #f2f2f2;
