@@ -25,7 +25,8 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
   res.render('pages/index', {
     titulo: "Chá de Panela | Duda & Vini",
-    estilo: "index.css"
+    estilo: "index.css",
+    header: false
   });
 });
 
@@ -33,7 +34,8 @@ app.get('/', (req, res) => {
 app.get('/listshop', (req, res) => {
   res.render('pages/listshop', {
     titulo: "Lista de compras",
-    estilo: "listshop.css"
+    estilo: "listshop.css",
+    header: true
   });
 });
 
@@ -52,7 +54,8 @@ app.get('/pix', (req, res) => {
     geladeira,
     chavePix,
     titulo: "Pix dos Noivos",
-    estilo: "pix.css"
+    estilo: "pix.css",
+    header: true
   });
 });
 

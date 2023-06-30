@@ -12,19 +12,22 @@
 </head>
 
 <body>
+    {{#if header}}
     <div class="navbars">
         <div class="navbar">
             <li>
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="/listshop">Lista de Compras</a>
+                <a href="/listshop">Lista de Presentes</a>
             </li>
             <li>
                 <a href="/pix">Pix</a>
             </li>
         </div>
     </div>
+    {{else}}
+    {{/if}}
     <div class="container">
         <div class="content">
             <!-- Conteúdo principal da página -->
@@ -34,7 +37,7 @@
         <footer class="footer">
             <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="/listshop">Lista de Produtos</a>
+                <a href="/listshop">Lista de Presentes</a>
                 <a href="/pix">Pix</a>
             </div>
             <div class="whatsapp-contact">
@@ -44,6 +47,7 @@
                 </a>
             </div>
         </footer>
+        
 </body>
 
 </html>
