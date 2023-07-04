@@ -451,11 +451,11 @@ const products = [
   },
   {
     id: 51,
-    name: 'Balcão Buffet 3 Portas e 1 Gaveta Duna Mavaular',
-    image: '/images/balc.jpg',
-    price: 637.55,
-    url: 'https://www.magazineluiza.com.br/balcao-buffet-3-portas-e-1-gaveta-duna-mavaular/p/aja52h2303/mo/otmo/',
-    mkp: 'Magazine Luiza',
+    name: 'Kit 10 Pratos Redondos Fundos Refeição Churrasco',
+    image: '/images/prats.jpg',
+    price: 24.70,
+    url: 'https://shopee.com.br/KIT-10-PRATOS-REDONDOS-FUNDOS-REFEI%C3%87%C3%83O-CHURRASCO-FESTA-PETALA-PLASTICO-i.670564893.22919932652',
+    mkp: 'Shopee',
     status: false
   },
   {
@@ -517,23 +517,22 @@ function createProductElement(product) {
   heart.className = 'bx bxs-heart';
   li.appendChild(heart);
 
-  const a = document.createElement('a');
-  a.href = product.url;
-  a.target = '_blank';
-  a.rel = 'noopener noreferrer';
-  a.className = 'product-link';
-  li.appendChild(a);
-
+  
   const image = document.createElement('img');
   image.src = product.image;
   image.alt = product.name;
   image.className = 'product-image';
-  a.appendChild(image);
-
+  li.appendChild(image);
+  
   const pop = document.createElement('div');
   pop.className = 'collum';
-  a.appendChild(pop);
+  li.appendChild(pop);
 
+  const button = document.createElement('button');
+  button.textContent = 'Presentear';
+  button.className = 'product-button';
+  li.appendChild(button);
+  
   const productName = document.createElement('p');
   productName.textContent = product.name;
   productName.className = 'product-name';
@@ -548,11 +547,6 @@ function createProductElement(product) {
   productMkp.textContent = product.mkp;
   productMkp.className = 'product-mkp';
   pop.appendChild(productMkp);
-
-  const productCod = document.createElement('span');
-  productCod.textContent = `cod: ${product.id}`;;
-  productCod.className = 'product-cod';
-  pop.appendChild(productCod);
 
   // Verifica se o produto foi favoritado
   let isFavorite = localStorage.getItem(`favorite-${product.id}`) === 'true';
@@ -575,19 +569,25 @@ function createProductElement(product) {
     }
   });
 
+  // Adiciona o evento de clique ao botão
+  button.addEventListener('click', function () {
+    window.open(product.url, '_blank');
+  });
+
   if (product.status) {
     const statusOverlay = document.createElement('div');
     statusOverlay.className = 'status-overlay';
-    a.appendChild(statusOverlay);
+    button.appendChild(statusOverlay);
 
     const statusText = document.createElement('span');
-    statusText.textContent = 'JÁ ADIQUIRIDO';
+    statusText.textContent = 'JÁ ADQUIRIDO';
     statusText.className = 'status-text';
     statusOverlay.appendChild(statusText);
   }
 
   return li;
 }
+
 
 // Example usage:
 filterByMarketplace(products);
