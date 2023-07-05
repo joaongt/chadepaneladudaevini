@@ -190,7 +190,7 @@ body {
 
 /* Estilo para o botão de cópia */
 #copyCepInput {
-  background-color: #b237ae;
+  background-color: #527489;
   color: #fff;
   border: none;
   padding: 4px 8px;
@@ -202,11 +202,11 @@ body {
 }
 
 #copyCepInput:hover {
-  background-color: #782683;
+  background-color: #1f2e36;
 }
 
 #copyCepInput:disabled {
-  background-color: #adb5bd;
+  background-color: #89a3b3;
   cursor: not-allowed;
 }
 

@@ -7,45 +7,43 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.navbars {
+
+.cabeca {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 3em;
 }
 
-.navbar {
-  margin-bottom: 4em;
-  background-color: #404040;
-  padding: 30px;
-  border-radius: .8em;
+.header{
+  background-color: transparent; /* Cor de fundo da div interna */
+  margin-top: 1em;
+  width: 45%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-around;
-  width: 450px;
-  height: 10px;
-  margin-top: 5em;
-}
-
-.navbar li {
+  flex-direction: row;
   list-style: none;
 }
-
-.navbar a {
-  color: #e8e8e8;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 13px;
-  transition: all 0.9s ease-out;
+.header li{
+  background-color: transparent;
 }
 
-.navbar a:hover {
-  color: #e8e8e8;
-  text-decoration: underline;
+.header li a{
+  text-decoration: none;
+  color: #2f4553;
+  font-weight: 800;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+
+}
+
+.header li a:hover{
+  color: #6593b0;
 }
 
 body {
-  background-color: #E8E8E8;
+  background-color: #aacee5;
 }
 
 .grid {
@@ -65,7 +63,7 @@ body {
   position: relative;
   padding: .7em;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #dbedf8;
   border-radius: 0.5rem;
   list-style: none;
   display: flex;
@@ -80,7 +78,7 @@ body {
   border: none;
   border-radius: 0.5rem;
   padding: .8em;
-  background-color: #404040;
+  background-color: #6593b0;
   color: #ffffff;
   cursor: pointer;
   z-index: 9;
@@ -88,7 +86,7 @@ body {
 }
 
 .product-button:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: #2f4553;
 }
 
 .product-image {
@@ -181,7 +179,8 @@ body {
 .pagination-button {
   padding: 8px 12px;
   margin: 0 5px;
-  background-color: #f2f2f2;
+  background-color: #6593b0;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -196,14 +195,15 @@ body {
 .page-number {
   padding: 6px 10px;
   margin: 0 3px;
-  background-color: #e6e6e6;
+  background-color: #dbedf8;
+  color: #2f4553;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .page-number:hover {
-  background-color: #d2d2d2;
+  background-color: #9cbed3;
 }
 
 .page-number:focus {
@@ -216,6 +216,7 @@ body {
   align-items: center;
   margin-bottom: 20px;
   margin-left: 5em;
+  font-weight: 7  00;
 }
 
 label {
@@ -229,6 +230,7 @@ label {
 select {
   padding: 5px;
   border-radius: 4em;
+  background-color: #dbedf8;
 }
 
 /* Optional: Styling for the select dropdown arrow */
@@ -277,14 +279,14 @@ body {
 }
 
 .footer {
-  background-color: #363636;
+  background-color: #9cbed3;
   padding: 20px;
-  color: #f2f2f2;
+  color: #2f4553;
   text-align: center;
 }
 
 .footer-links a {
-  color: #f2f2f2;
+  color: #2f4553;
   text-decoration: none;
   margin-right: 10px;
 }
@@ -298,7 +300,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f2f2f2;
+  color: #2f4553;
   text-decoration: none;
 }
 
@@ -316,13 +318,17 @@ body {
     overflow-x: hidden;
   }
 
-  .navbar {
+  .cabeca{
+    margin-bottom: 0;
+  }
+
+  .header {
     width: 100%;
     margin: 1em;
   }
 
-  .navbar a {
-    font-size: 12px;
+  .header a {
+    font-size: 14px;
   }
 
   #product-container {

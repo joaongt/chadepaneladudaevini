@@ -8,42 +8,40 @@
 }
 
 
-.navbars {
+.cabeca {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 3em;
 }
 
-.navbar {
-  margin-bottom: 4em;
-  background-color: #404040;
-  padding: 30px;
-  border-radius: .8em;
+.header{
+  background-color: transparent; /* Cor de fundo da div interna */
+  margin-top: 1em;
+  width: 45%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-around;
-  width: 450px;
-  height: 10px;
-  margin-top: 5em;
-}
-
-.navbar li {
+  flex-direction: row;
   list-style: none;
 }
+.header li{
+  background-color: transparent;
+}
 
-.navbar a {
-  color: #e8e8e8;
+.header li a{
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 13px;
-  transition: all 0.9s ease-out;
+  color: #2f4553;
+  font-weight: 800;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+
 }
 
-.navbar a:hover {
-  color: #e8e8e8;
-  text-decoration: underline;
+.header li a:hover{
+  color: #6593b0;
 }
+
 
 
 h1 {
@@ -75,7 +73,7 @@ p {
 
 h3 {
   text-align: center;
-  color: #888888;
+  color: #6593b0;
   margin-bottom: 10px;
 }
 
@@ -93,7 +91,7 @@ h3 {
   align-items: center;
   width: 300px;
   height: 20px;
-  background-color: #e4e4e4;
+  background-color: #d0e1f1;
   border-radius: 10px;
   margin-bottom: 10px;
   overflow: hidden;
@@ -101,7 +99,7 @@ h3 {
 
 .progress-bar-fill {
   height: 100%;
-  background-color: #b237ae;
+  background-color: #2f4553;
   border-radius: 10px;
   transition: width 0.5s ease-in-out;
 }
@@ -147,7 +145,7 @@ h3 {
 
 /* Estilo para o botão de cópia */
 #copyPixButton {
-  background-color: #b237ae;
+  background-color: #527489;
   color: #fff;
   border: none;
   padding: 6px 10px;
@@ -158,11 +156,11 @@ h3 {
 }
 
 #copyPixButton:hover {
-  background-color: #782683;
+  background-color: #1f2e36;
 }
 
 #copyPixButton:disabled {
-  background-color: #adb5bd;
+  background-color: #89a3b3;
   cursor: not-allowed;
 }
 
@@ -181,6 +179,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #e6eef4;
 }
 
 .container {
@@ -194,14 +193,14 @@ body {
 }
 
 .footer {
-  background-color: #363636;
+  background-color: #6593b0;
   padding: 20px;
-  color: #f2f2f2;
+  color: #deeaf5;
   text-align: center;
 }
 
 .footer-links a {
-  color: #f2f2f2;
+  color: #deeaf5;
   text-decoration: none;
   margin-right: 10px;
 }
@@ -210,12 +209,13 @@ body {
   text-decoration: underline;
 }
 
+
 .whatsapp-contact a {
   margin-top: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f2f2f2;
+  color: #deeaf5;
   text-decoration: none;
 }
 
@@ -232,12 +232,22 @@ body {
     overflow-x: hidden;
   }
 
-  .navbar {
+  .cabeca{
+    margin-bottom: 0;
+    border-bottom: 1px solid #1f2e36;
+    margin-bottom: .5em;
+  }
+
+  .header {
     width: 100%;
     margin: 1em;
   }
 
-  .navbar a {
-    font-size: 12px;
+  .header a {
+    font-size: 14px;
+  }
+
+  .info-center{
+    margin-bottom: 1em;
   }
 }

@@ -35,7 +35,7 @@ app.get('/listshop', (req, res) => {
   res.render('pages/listshop', {
     titulo: "Lista de compras",
     estilo: "listshop.css",
-    header: true
+    header: false
   });
 });
 
@@ -44,7 +44,7 @@ app.get('/pix', (req, res) => {
   // Dados de exemplo da geladeira
   const geladeira = {
     valorTotal: 4000, // Valor total necessário para a geladeira
-    valorArrecadado: 0, // Valor já arrecadado
+    valorArrecadado: 300, // Valor já arrecadado
   };
 
   const chavePix = '01855318652'; // Substitua pela chave PIX dos noivos
