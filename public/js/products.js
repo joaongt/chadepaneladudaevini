@@ -569,10 +569,10 @@ function createProductElement(product) {
     }
   });
 
-  // Adiciona o evento de clique ao botão
-  button.addEventListener('click', function () {
-    window.open(product.url, '_blank');
-  });
+// Adiciona o evento de clique ao botão
+button.addEventListener('click', function () {
+  window.open(product.url, '_blank');
+});
 
   if (product.status) {
     const statusOverlay = document.createElement('div');
@@ -582,6 +582,11 @@ function createProductElement(product) {
     const statusText = document.createElement('span');
     statusText.textContent = 'JÁ ADQUIRIDO';
     statusText.className = 'status-text';
+    product.url = ""; // Removendo a URL do produto
+    button.disabled = true; // Desabilitando o botão
+    // Altera o estilo do ponteiro quando passa sobre o botão
+    button.style.cursor = 'inherit';
+    
     statusOverlay.appendChild(statusText);
   }
 
