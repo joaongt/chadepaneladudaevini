@@ -76,9 +76,9 @@ const products = [
     name: 'Air Fry Philco 4L Preta',
     image: '/images/airfryer.jpg',
     price: 469.90,
-    url: 'https://www.casasbahia.com.br/fritadeira-eletrica-sem-oleo-air-fry-philco-pfr15pg-gourmet-4l-preta/p/55035451',
-    mkp: 'Casas Bahia',
-    status: false
+    url: 'https://www.kabum.com.br/produto/341342/fritadeira-air-fry-sem-oleo-philco-pfr15pg-gourmet-4l-1500w-127v-preto?gclid=CjwKCAjwzJmlBhBBEiwAEJyLux4BjNMMAWbMW_gaRAOSmyH9cVuMH8bGAwK3BRoY3AWu9d7mrTO5HRoCS00QAvD_BwE',
+    mkp: 'Kabum',
+    status: true
   },
   {
     id: 10,
