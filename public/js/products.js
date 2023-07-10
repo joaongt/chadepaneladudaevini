@@ -114,7 +114,7 @@ const products = [
     price: 92.00,
     url: 'https://www.casasbahia.com.br/ferro-de-passar-a-vapor-electrolux-efficient-esi10-com-spray-e-base-antiaderente-azul/p/55058111',
     mkp: 'Casas Bahia',
-    status: false
+    status: true
   },
   {
     id: 14,
