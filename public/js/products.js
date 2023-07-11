@@ -574,13 +574,12 @@ function createProductElement(product) {
     divAviso.className = 'center';
     divAviso.innerHTML = `
       <div class="instruction-div">
+      <i class='bx bx-x'></i>
           <h2>O que devo fazer após efetuar a compra?</h2>
           <p>
-              1. Você enviará uma mensagem no whatsapp (31) 98987-8715 de nome João. Na mensagem coloque apenas o nome e o
-              cod
+              1. Você enviará uma mensagem no whatsapp <a href="https://api.whatsapp.com/send?phone=31989878715" target="_blank">(31) 98987-8715</a> de nome João. Na mensagem coloque apenas o nome ou o site
               do produto que você comprou.<br>
-              2. Exemplo: Olá, estou enviando essa mensagem para avisar que eu adiquiri o produto Caixa Organizadora Preta
-              com o cod 1.
+              2. Exemplo: Olá, estou enviando essa mensagem para avisar que eu adiquiri o produto Caixa Organizadora Preta.
           </p>
           <h2>Qual é o endereço dos noivos?</h2>
           <p>Rua João Camilo de Oliveira Torres, 830. Bairro Tupi - Cep: 31846-310
@@ -589,18 +588,27 @@ function createProductElement(product) {
           <center><p>Clique no botão "OK" para ser redirecionado a página do produto.</p></center>
           <center><button id="okk">OK</button></center>
       </div>
+
+      <script>
+      const Div = document.querySelector('.instruction-div');
+
+      </script>
+    })
   `;
 
-  document.body.appendChild(divAviso);
+    document.body.appendChild(divAviso);
 
-  const okk = divAviso.querySelector('#okk');
+    const x = divAviso.querySelector('.bx-x');
+    x.addEventListener('click', () => {
+      divAviso.style.display = 'none';
+    });
 
-  okk.addEventListener('click', () => {
-    const cc = document.querySelector(".center");
-    cc.style.display = 'none';
-    window.open(product.url, '_blank');
+    const okk = divAviso.querySelector('#okk');
+    okk.addEventListener('click', () => {
+      divAviso.style.display = 'none';
+      window.open(product.url, '_blank');
+    });
   });
-});
 
 
 
@@ -791,9 +799,3 @@ function filterByMarketplace(products) {
     selectElement.appendChild(option);
   });
 }
-
-
-
-
-
-

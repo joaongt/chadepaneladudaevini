@@ -384,6 +384,38 @@ body {
   cursor: not-allowed;
 }
 
+.instruction-div p a {
+  color: #000000;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.bx-x {
+  position: absolute;
+  top: 1rem;
+  right: .8rem;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+.instruction-div p a:hover {
+  color: #feffff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.instruction-div p a:visited {
+  font-weight: 600;
+  color: #000000;
+}
+
+.instruction-div p a:focus {
+  outline: none; /* Remove a borda de foco ao clicar no link */
+}
+
+.instruction-div p a:active {
+  color: #2f4553; /* Define a cor do texto ao clicar no link para amarelo */
+}
 
 /* Styles for iPhone 11 */
 @media (max-width: 414px) {
