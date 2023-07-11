@@ -505,8 +505,8 @@ const products = [
   },
 ];
 
-
 const productContainer = document.getElementById('product-container');
+const Div = document.querySelector('.instruction-div');
 
 // Função para criar o elemento de produto
 function createProductElement(product) {
@@ -517,13 +517,13 @@ function createProductElement(product) {
   heart.className = 'bx bxs-heart';
   li.appendChild(heart);
 
-  
+
   const image = document.createElement('img');
   image.src = product.image;
   image.alt = product.name;
   image.className = 'product-image';
   li.appendChild(image);
-  
+
   const pop = document.createElement('div');
   pop.className = 'collum';
   li.appendChild(pop);
@@ -532,7 +532,7 @@ function createProductElement(product) {
   button.textContent = 'Presentear';
   button.className = 'product-button';
   li.appendChild(button);
-  
+
   const productName = document.createElement('p');
   productName.textContent = product.name;
   productName.className = 'product-name';
@@ -569,10 +569,40 @@ function createProductElement(product) {
     }
   });
 
-// Adiciona o evento de clique ao botão
-button.addEventListener('click', function () {
-  window.open(product.url, '_blank');
+  button.addEventListener('click', () => {
+    const divAviso = document.createElement('div');
+    divAviso.className = 'center';
+    divAviso.innerHTML = `
+      <div class="instruction-div">
+          <h2>O que devo fazer após efetuar a compra?</h2>
+          <p>
+              1. Você enviará uma mensagem no whatsapp (31) 98987-8715 de nome João. Na mensagem coloque apenas o nome e o
+              cod
+              do produto que você comprou.<br>
+              2. Exemplo: Olá, estou enviando essa mensagem para avisar que eu adiquiri o produto Caixa Organizadora Preta
+              com o cod 1.
+          </p>
+          <h2>Qual é o endereço dos noivos?</h2>
+          <p>Rua João Camilo de Oliveira Torres, 830. Bairro Tupi - Cep: 31846-310
+              <button id="copyCepInput" onclick="copyCepToClipboard()"><i class='bx bx-copy'></i></button>
+          </p><br><br>
+          <center><p>Clique no botão "OK" para ser redirecionado a página do produto.</p></center>
+          <center><button id="okk">OK</button></center>
+      </div>
+  `;
+
+  document.body.appendChild(divAviso);
+
+  const okk = divAviso.querySelector('#okk');
+
+  okk.addEventListener('click', () => {
+    const cc = document.querySelector(".center");
+    cc.style.display = 'none';
+    window.open(product.url, '_blank');
+  });
 });
+
+
 
   if (product.status) {
     const statusOverlay = document.createElement('div');
@@ -586,11 +616,26 @@ button.addEventListener('click', function () {
     button.disabled = true; // Desabilitando o botão
     // Altera o estilo do ponteiro quando passa sobre o botão
     button.style.cursor = 'inherit';
-    
+
     statusOverlay.appendChild(statusText);
   }
 
   return li;
+}
+
+function copyCepToClipboard() {
+  // Seleciona o texto da chave PIX
+  const cepInput = document.createElement('input');
+  cepInput.value = "R. João Camilo de Oliveira Tôrres, 830 - Tupi, Belo Horizonte - MG, 31846-310";
+  document.body.appendChild(cepInput);
+  cepInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(cepInput);
+
+  // Atualiza o texto do botão para indicar que foi copiado
+  const copyButton = document.getElementById('copyCepInput');
+  copyButton.innerHTML = '<i class="bx bxs-copy"></i>';
+  copyButton.disabled = true;
 }
 
 

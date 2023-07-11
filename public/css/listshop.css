@@ -310,6 +310,80 @@ body {
   margin-right: 5px;
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+}
+
+.instruction-div {
+  z-index: 9999;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  /* Posiciona o elemento no centro vertical */
+  left: 50%;
+  /* Posiciona o elemento no centro horizontal */
+  transform: translate(-50%, -50%);
+  /* Centraliza o elemento no centro da página */
+  background-color: #FFFFFF;
+  padding: 70px;
+  text-align: start;
+}
+
+.instruction-div h2 {
+  background-color: #FFFFFF;
+}
+
+.instruction-div p {
+  margin-top: .5em;
+  background-color: #FFFFFF;
+  margin-bottom: 1.5em;
+}
+
+#okk {
+  background-color: #6593b0; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove a borda do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  text-align: center; /* Alinhamento do texto */
+  text-decoration: none; /* Remove qualquer decoração de texto */
+  display: inline-block; /* Permite que o botão se ajuste ao tamanho do texto */
+  font-size: 16px; /* Tamanho da fonte do texto */
+  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+  border-radius: 4px; /* Adiciona cantos arredondados ao botão */
+  width: 100px;
+}
+
+#okk:hover {
+  background-color: #2f4553; /* Cor de fundo quando o mouse passa sobre o botão */
+}
+
+/* Estilo para o botão de cópia */
+#copyCepInput {
+  background-color: #527489;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: .5em;
+}
+
+#copyCepInput:hover {
+  background-color: #1f2e36;
+}
+
+#copyCepInput:disabled {
+  background-color: #89a3b3;
+  cursor: not-allowed;
+}
+
 
 /* Styles for iPhone 11 */
 @media (max-width: 414px) {
@@ -365,6 +439,29 @@ body {
     font-size: 11px;
   }
 
+  .center {
+    width: 100%;
+  }
+
+
+  .instruction-div {
+    padding: 40px;
+    /* Reduz o padding para melhorar a legibilidade em telas menores */
+    width: 80%;
+    /* Define uma largura menor para o elemento em dispositivos móveis */
+    height: 70%;
+    z-index: 99;
+    overflow-x: scroll;
+  }
+
+  .instruction-div h2 {
+    font-size: 16px;
+  }
+
+  .instruction-div p {
+    font-size: 13px;
+  }
+
   .filters {
     width: 100%;
     display: flex;
@@ -389,4 +486,22 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     /* Ajuste conforme necessário */
   }
+}
+
+/* Styles for iPhone 11 */
+@media (max-width: 375px) {
+  
+  .product-button{
+    padding: 4px;
+    font-size: 9px;
+  }
+
+  .pagination{
+    margin: 5em;
+  }
+  
+  .pagination-button {
+    padding: 4px 8px;
+  }
+
 }
