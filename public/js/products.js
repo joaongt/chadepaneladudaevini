@@ -402,7 +402,7 @@ const products = [
     price: 199.90,
     url: 'https://decoramaiscasa.bubbstorelive.com.br/coberdrom-canefleece-queen-caneladoplush-aveludado-cinza/p',
     mkp: 'Decora Mais Casa',
-    status: false
+    status: true
   },
   {
     id: 46,
