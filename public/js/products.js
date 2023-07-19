@@ -51,7 +51,7 @@ const products = [
     price: 185.85,
     url: 'https://www.americanas.com.br/produto/3467628803/aspirador-vertical-1000w-1-2l-electrolux-stk12',
     mkp: 'Americanas',
-    status: false
+    status: true
   },
   {
     id: 7,
