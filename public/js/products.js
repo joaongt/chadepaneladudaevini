@@ -100,10 +100,10 @@ const products = [
   },
   {
     id: 12,
-    name: '2 Banquetas Estofadas Giratória Preta',
+    name: 'Kit 2 Banquetas Base Giratória Cromada - Preta',
     image: '/images/banco.jpg',
-    price: 690.21,
-    url: 'https://www.submarino.com.br/produto/5473081445',
+    price: 499.32,
+    url: 'https://www.submarino.com.br/produto/3652007195?pfm_carac=2-banquetas-estofadas-giratoria-preta&pfm_index=11&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=6304cfcdadbc5f39b93be291',
     mkp: 'Submarino',
     status: false
   },
@@ -145,12 +145,11 @@ const products = [
   },
   {
     id: 17,
-    name: 'Jogo De Panelas 8 Peças Ceramic',
-    image: '/images/panela.jpg',
-    price: 731.83,
+    name: 'Indisponível',
+    price: 0,
     url: 'https://www.casasbahia.com.br/jogo-de-panelas-8-pecas-ceramic-life-smart-plus-cinza-brinox/p/1537818723',
     mkp: 'Casas Bahia',
-    status: false
+    status: true
   },
   {
     id: 18,
@@ -237,8 +236,8 @@ const products = [
     id: 27,
     name: 'Cj 6 Pratos Raso em Porcelana Oxford',
     image: '/images/panin.jpg',
-    price: 200.99,
-    url: 'https://www.madeiramadeira.com.br/aparador-buffet-4-portas-veneza-multimoveis-branco-3521297.html',
+    price: 178.49,
+    url: 'https://shopee.com.br/product/660511511/22495634628?d_id=5afed&utm_content=3UvRAScPZn65gcew19T6MF3Dwy6F',
     mkp: 'Shopee',
     status: false
   },
