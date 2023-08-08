@@ -3,7 +3,7 @@ const products = [
     id: 1,
     name: 'Caixa Organizadora Preta',
     image: '/images/cestapreta.jpg',
-    price: 46.99,
+    price: 49.99,
     url: 'https://shp.ee/5awwx48',
     mkp: 'Shopee',
     status: false
@@ -12,7 +12,7 @@ const products = [
     id: 2,
     name: 'Cesto Roupa Suja Marrom',
     image: '/images/cestamarrom.jpg',
-    price: 88.00,
+    price: 110.00,
     url: 'https://shp.ee/r3s88a8',
     mkp: 'Shopee',
     status: false
@@ -21,7 +21,7 @@ const products = [
     id: 3,
     name: 'Almofada branca',
     image: '/images/travesseirobranco.jpg',
-    price: 30.15,
+    price: 29.99,
     url: 'https://shp.ee/5vm59w8',
     mkp: 'Shopee',
     status: false
@@ -30,7 +30,7 @@ const products = [
     id: 4,
     name: 'Kit 2 Capas de almofadas personalizadas',
     image: '/images/travesseiropersonalizado.jpg',
-    price: 39.00,
+    price: 41.00,
     url: 'https://shp.ee/tvnrxb8',
     mkp: 'Shopee',
     status: false
@@ -39,7 +39,7 @@ const products = [
     id: 5,
     name: 'Kit Peseira Casal e 2 Capas de Almofadas',
     image: '/images/roupadecama.jpg',
-    price: 89.90,
+    price: 88.00,
     url: 'https://shp.ee/43ewv58',
     mkp: 'Shopee',
     status: false
@@ -48,7 +48,7 @@ const products = [
     id: 6,
     name: 'Aspirador Vertical 1000W',
     image: '/images/aspirador.jpg',
-    price: 185.85,
+    price: 224.46,
     url: 'https://www.americanas.com.br/produto/3467628803/aspirador-vertical-1000w-1-2l-electrolux-stk12',
     mkp: 'Americanas',
     status: true
@@ -57,7 +57,7 @@ const products = [
     id: 7,
     name: 'Jogo de Petisqueira Coração',
     image: '/images/petisqueira.jpg',
-    price: 38.90,
+    price: 41.90,
     url: 'https://shopee.com.br/product/406093328/16008762736?d_id=5afed&utm_content=3UvRAScNK4R6JKb8wHde1vEBhuo5',
     mkp: 'Shopee',
     status: false
@@ -66,7 +66,7 @@ const products = [
     id: 8,
     name: 'Garrafa Termica Nordica',
     image: '/images/garrafa.jpg',
-    price: 99.90,
+    price: 149.90,
     url: 'https://shopee.com.br/product/405597031/13674322789?d_id=5afed&utm_content=3UvRAScNK4dRH7b3zKSjyQuBuj5q',
     mkp: 'Shopee',
     status: false
@@ -84,7 +84,7 @@ const products = [
     id: 10,
     name: 'Liquidificador Electrolux 700w com Copo de Vidro',
     image: '/images/liquidificador.jpg',
-    price: 369.00,
+    price: 319.00,
     url: 'https://loja.electrolux.com.br/liquidificador-electrolux-700w-com-copo-de-vidro-tecnologia-truflow-experience-ebs30/p',
     mkp: 'Electrolux',
     status: false
@@ -93,7 +93,7 @@ const products = [
     id: 11,
     name: 'Colcha 3 Peças QUEEN Corttex Milão Azul',
     image: '/images/cama.jpg',
-    price: 148.78,
+    price: 140.51,
     url: 'https://www.todecorando.com.br/colcha-3-pecas-queen-corttex-milao-azul/p',
     mkp: 'Tô Decorando',
     status: false
@@ -102,7 +102,7 @@ const products = [
     id: 12,
     name: 'Kit 2 Banquetas Base Giratória Cromada - Preta',
     image: '/images/banco.jpg',
-    price: 499.32,
+    price: 439.40,
     url: 'https://www.submarino.com.br/produto/3652007195?pfm_carac=2-banquetas-estofadas-giratoria-preta&pfm_index=11&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=6304cfcdadbc5f39b93be291',
     mkp: 'Submarino',
     status: false
@@ -120,7 +120,7 @@ const products = [
     id: 14,
     name: 'Varal de Parede Recolhível Seca Fácil',
     image: '/images/varal.jpg',
-    price: 49.99,
+    price: 44.90,
     url: 'https://www.amazon.com.br/Varal-Parede-Recolh%C3%ADvel-Seca-F%C3%A1cil/dp/B076QGDVSL/ref=asc_df_B076QGDVSL/?tag=googleshopp06-20&linkCode=df0&hvadid=379755604079&hvpos=&hvnetw=g&hvrand=9949169672966137105&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-811912834025&psc=1',
     mkp: 'Amazon',
     status: false
@@ -129,7 +129,7 @@ const products = [
     id: 15,
     name: 'Kit 6 Potes Herméticos de Vidro',
     image: '/images/potes.jpg',
-    price: 109.90,
+    price: 99.90,
     url: 'https://shopee.com.br/product/752849300/20400823016?d_id=5afed&utm_content=3UvRAScNMAL5aYctNq5CQVpk5WMu',
     mkp: 'Shopee',
     status: false
@@ -182,7 +182,7 @@ const products = [
     id: 21,
     name: 'Porta Palito De Dente Automático',
     image: '/images/palito.jpg',
-    price: 31.99,
+    price: 12.99,
     url: 'https://shopee.com.br/product/683285752/20313154386?d_id=5afed&utm_content=3UvRAScJazts7RraH8pECxpHN1YK',
     mkp: 'Shopee',
     status: false
@@ -200,7 +200,7 @@ const products = [
     id: 23,
     name: 'Caixa De Armazenamento De Roupas',
     image: '/images/organiza.jpg',
-    price: 18.99,
+    price: 4.42,
     url: 'https://shopee.com.br/product/359390309/10585457953?d_id=5afed&utm_content=3UvRAScJb1RMEdiXSyyLJqw2yTro',
     mkp: 'Shopee',
     status: false
@@ -209,7 +209,7 @@ const products = [
     id: 24,
     name: 'Suporte Multiuso Porta Vassoura',
     image: '/images/vass.jpg',
-    price: 36.90,
+    price: 34.90,
     url: 'https://shopee.com.br/product/304032598/17922777583?d_id=5afed&utm_content=3UvRAScJb1VgSkUPSUpoUt6suaD5',
     mkp: 'Shopee',
     status: false
@@ -218,7 +218,7 @@ const products = [
     id: 25,
     name: 'Ventilador de Mesa 30cm Mondial Preto',
     image: '/images/ventilador.jpg',
-    price: 109.90,
+    price: 112.50,
     url: 'https://m.casasbahia.com.br/ventilador-de-mesa-30cm-mondial-super-power-vsp-30-b-6-pas-3-velocidades-preto-55029985.html',
     mkp: 'Casas Bahia',
     status: false
@@ -227,7 +227,7 @@ const products = [
     id: 26,
     name: 'Rack para TV até 70 Polegadas 220cm 3 Gavetas',
     image: '/images/rack.jpg',
-    price: 399.90,
+    price: 419.90,
     url: 'https://www.madeiramadeira.com.br/rack-para-tv-ate-70-polegadas-220cm-3-gavetas-retro-manchester-yescasa-795198.html?origem=pla-795198',
     mkp: 'madeiramadeira',
     status: false
