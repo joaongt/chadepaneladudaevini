@@ -266,7 +266,7 @@ const products = [
     price: 110.57,
     url: 'https://www.amazon.com.br/Mop-Spray-Flash-Limp-Verde/dp/B07CHRZX7X/ref=asc_df_B07CHRZX7X/?tag=googleshopp06-20&linkCode=df0&hvadid=379787518793&hvpos=&hvnetw=g&hvrand=3999800868748910479&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-811008721560&psc=1',
     mkp: 'Amazon',
-    status: false
+    status: true
   },
   {
     id: 31,
