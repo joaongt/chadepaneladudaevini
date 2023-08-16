@@ -43,8 +43,8 @@ app.get('/listshop', (req, res) => {
 app.get('/pix', (req, res) => {
   // Dados de exemplo da geladeira
   const geladeira = {
-    valorTotal: 4000, // Valor total necessário para a geladeira
-    valorArrecadado: 0, // Valor já arrecadado
+    valorTotal: 5000, // Valor total necessário para a geladeira
+    valorArrecadado: 4900, // Valor já arrecadado
   };
 
   const chavePix = '01855318652'; // Substitua pela chave PIX dos noivos
