@@ -69,7 +69,7 @@ const products = [
     price: 149.90,
     url: 'https://shopee.com.br/product/405597031/13674322789?d_id=5afed&utm_content=3UvRAScNK4dRH7b3zKSjyQuBuj5q',
     mkp: 'Shopee',
-    status: false
+    status: true
   },
   {
     id: 9,
@@ -245,7 +245,7 @@ const products = [
     id: 28,
     name: 'Kit 3 Peneiras Coador em Aço Inox',
     image: '/images/peneira.jpg',
-    price: 13.99,
+    price: 12.99,
     url: 'https://shopee.com.br/product/807581166/15992338010?d_id=5afed&utm_content=3UvRAScPZnJFajkbhcYQt4iukJpX',
     mkp: 'Shopee',
     status: false
@@ -254,7 +254,7 @@ const products = [
     id: 29,
     name: '30 Sacos Saquinho Zip Lock Hermético 18x23 Abre E Fecha',
     image: '/images/saquinho.png',
-    price: 37.50,
+    price: 44.89,
     url: 'https://shopee.com.br/product/283773653/13555035189?d_id=5afed&utm_content=3UvRAScPZnRjnXdECFUXXss8DdgB',
     mkp: 'Shopee',
     status: false
@@ -263,7 +263,7 @@ const products = [
     id: 30,
     name: 'Mop Spray com Dispenser de 400 ml, (Borrifa, Limpa e Seca), Verde',
     image: '/images/mop.jpg',
-    price: 110.57,
+    price: 95.90,
     url: 'https://www.amazon.com.br/Mop-Spray-Flash-Limp-Verde/dp/B07CHRZX7X/ref=asc_df_B07CHRZX7X/?tag=googleshopp06-20&linkCode=df0&hvadid=379787518793&hvpos=&hvnetw=g&hvrand=3999800868748910479&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-811008721560&psc=1',
     mkp: 'Amazon',
     status: true
@@ -281,26 +281,26 @@ const products = [
     id: 32,
     name: 'Porta Condimentos Base Giratório Inox 12 Potes',
     image: '/images/port.jpg',
-    price: 76.99,
-    url: 'https://www.magazineluiza.com.br/porta-condimentos-base-giratorio-inox-12-potes-temperos-dubai/p/dc6f8b67g1/ud/port/',
-    mkp: 'Magazine Luiza',
+    price: 69.99,
+    url: 'https://produto.mercadolivre.com.br/MLB-2783565849-porta-condimentos-base-giratorio-inox-12-potes-temperos-_JM?matt_tool=81106094&matt_word=&matt_source=google&matt_campaign_id=14302215564&matt_ad_group_id=154967597508&matt_match_type=&matt_network=g&matt_device=c&matt_creative=649487315917&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=344066411&matt_product_id=MLB2783565849&matt_product_partition_id=1960857711113&matt_target_id=aud-1966919989813:pla-1960857711113&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4zdYEdg1yHuex5XeilTwlE6kVSRFT26eZhsLRgDlgQjxbspsOvaDcaAiKFEALw_wcB',
+    mkp: 'Mercado Livre',
     status: false
   },
   {
     id: 33,
-    name: 'TRAVESSA PORCELANA C/ ALÇA BASIC BRANCO',
+    name: 'Refratário de Porcelana Com Alça Basic Branco - Lyor',
     image: '/images/trav.jpg',
-    price: 42.90,
-    url: 'https://shopee.com.br/product/384207446/18098430652?d_id=5afed&utm_content=3UvRAScPZoTdEQfAY55NVLaHkEK1',
-    mkp: 'Shopee',
+    price: 59.90,
+    url: 'https://www.magazineluiza.com.br/refratario-de-porcelana-com-alca-basic-branco-lyor/p/ea5e94ckda/ud/trav/?seller_id=vivacenterbazarltda&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=69099&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5znZu-EJrs34fCSA7vvvQCY_Ok1quy1QxzLe7MVae2XWltKipowDAaAiKAEALw_wcB&gclsrc=aw.ds',
+    mkp: 'Magazine Luiza',
     status: false
   },
   {
     id: 34,
     name: 'Kit 3 Formas com Fundo Removível Antiaderente',
     image: '/images/po.jpg',
-    price: 35.94,
-    url: 'htthttps://shopee.com.br/product/560526528/12385045313?d_id=5afed&utm_content=3UvRAScPZoa3o7BAnSECmUJooXnf',
+    price: 35.00,
+    url: 'https://shopee.com.br/product/560526528/12385045313?d_id=5afed&utm_content=3UvRAScPZoa3o7BAnSECmUJooXnf',
     mkp: 'Shopee',
     status: false
   },
@@ -308,16 +308,16 @@ const products = [
     id: 35,
     name: 'Conjunto 6 Taças Diamante Transparente Lyor 265ml',
     image: '/images/taca.jpg',
-    price: 48.87,
-    url: 'https://shopee.com.br/product/904100548/23006703637?d_id=5afed&utm_content=3UvRAScPZogNwtk3YKKae3My2sDR',
-    mkp: 'Shopee',
+    price: 49.90,
+    url: 'https://produto.mercadolivre.com.br/MLB-3427022082-jogo-6-tacas-vidro-260ml-diamond-transparente-_JM?matt_tool=81106094&matt_word=&matt_source=google&matt_campaign_id=14302215564&matt_ad_group_id=154967597508&matt_match_type=&matt_network=g&matt_device=c&matt_creative=649487315917&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=733029384&matt_product_id=MLB3427022082&matt_product_partition_id=1960857711113&matt_target_id=aud-1966919989813:pla-1960857711113&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5P5dQ2OWXw79sSwgv14kKm7Z25uzOP6K1eL_97hueUhA-YPF1jl14aAkF9EALw_wcB',
+    mkp: 'Mercado Livre',
     status: false
   },
   {
     id: 36,
     name: 'Chuveiro Lorenzetti Acqua Duo Preto e Cromo 5500w 110v',
     image: '/images/chuv.jpg',
-    price: 502.11,
+    price: 519.90,
     url: 'https://www.magazineluiza.com.br/chuveiro-lorenzetti-acqua-duo-preto-e-cromo-5500w-110v/p/jjk39582a9/cj/cjcv/',
     mkp: 'Magazine Luiza',
     status: false
@@ -326,7 +326,7 @@ const products = [
     id: 37,
     name: 'Mesa De Passar Extra Forte C/Passa Mangas Prata - Utilaço',
     image: '/images/pass.jpg',
-    price: 177.90,
+    price: 147.90,
     url: 'https://www.amazon.com.br/PASSAR-EXTRA-FORTE-PASSA-MANGAS/dp/B09BWYSNPY/ref=asc_df_B09BWYSNPY/?tag=googleshopp06-20&linkCode=df0&hvadid=379736754157&hvpos=&hvnetw=g&hvrand=16044077227179969590&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-1456287705521&psc=1',
     mkp: 'Amazon',
     status: false
@@ -362,7 +362,7 @@ const products = [
     id: 41,
     name: 'Escorredor De Pratos Louça Em Bambu',
     image: '/images/prat.jpg',
-    price: 48.97,
+    price: 52.97,
     url: 'https://shopee.com.br/Escorredor-De-Pratos-Lou%C3%A7a-Em-Bambu-Natural-Madeira-Cozinha-i.946786498.20173082340',
     mkp: 'Shopee',
     status: false
@@ -389,7 +389,7 @@ const products = [
     id: 44,
     name: 'Toalha 100% Algodão Prata Mike',
     image: '/images/banho.jpg',
-    price: 14.90,
+    price: 12.90,
     url: 'https://santistadecora.com.br/pr/toalha-100-algodao-prata-mike/SANPRTROZMI8211',
     mkp: 'santistadecora',
     status: false
