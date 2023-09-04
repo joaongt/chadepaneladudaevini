@@ -221,7 +221,7 @@ const products = [
     price: 112.50,
     url: 'https://m.casasbahia.com.br/ventilador-de-mesa-30cm-mondial-super-power-vsp-30-b-6-pas-3-velocidades-preto-55029985.html',
     mkp: 'Casas Bahia',
-    status: false
+    status: true
   },
   {
     id: 26,
