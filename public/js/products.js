@@ -87,7 +87,7 @@ const products = [
     price: 319.00,
     url: 'https://loja.electrolux.com.br/liquidificador-electrolux-700w-com-copo-de-vidro-tecnologia-truflow-experience-ebs30/p',
     mkp: 'Electrolux',
-    status: false
+    status: true
   },
   {
     id: 11,
