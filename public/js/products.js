@@ -158,7 +158,7 @@ const products = [
     price: 219.00,
     url: 'https://www.tramontina.com.br/panela-de-pressao-tramontina-vancouver-em-aluminio-com-revestimento-interno-e-externo-antiaderente-starflon-max-grafite-20-cm-4-5-l/20582620.html',
     mkp: 'Tramontina',
-    status: false
+    status: true
   },
   {
     id: 19,
