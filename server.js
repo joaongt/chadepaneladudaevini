@@ -39,26 +39,6 @@ app.get('/listshop', (req, res) => {
   });
 });
 
-// Definindo a rota para a página do PIX
-// app.get('/pix', (req, res) => {
-//   // Dados de exemplo da geladeira
-//   const geladeira = {
-//     valorTotal: 5000, // Valor total necessário para a geladeira
-//     valorArrecadado: 4900, // Valor já arrecadado
-//   };
-
-  // const chavePix = '01855318652'; // Substitua pela chave PIX dos noivos
-
-  // Renderizando a página do PIX e passando os dados da geladeira
-//   res.render('pages/pix', {
-//     geladeira,
-//     chavePix,
-//     titulo: "Pix dos Noivos",
-//     estilo: "pix.css",
-//     header: true
-//   });
-// });
-
 // Função auxiliar para calcular a largura da barra de progresso
 app.locals.calculateProgressWidth = (valorArrecadado, valorTotal) => {
   return (valorArrecadado / valorTotal) * 100;
