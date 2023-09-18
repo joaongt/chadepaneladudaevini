@@ -423,10 +423,10 @@ const products = [
   },
   {
     id: 48,
-    name: 'Jogo de Panelas New York Casambiente 8 peças',
+    name: 'Jogo De Panelas Ceramic Life Smart Plus Brinox 6 Peças',
     image: '/images/panelinhas.jpg',
     price: 497.11,
-    url: 'https://www.magazineluiza.com.br/jogo-de-panelas-new-york-casambiente-8-pecas-com-revestimento-antiaderente-ceramico/p/baa5883k0j/ud/cjpn/',
+    url: 'https://www.magazineluiza.com.br/jogo-de-panelas-ceramic-life-smart-plus-brinox-6-pecas-antiaderente-revestimento-ceramico-vanilla-brinox-revestidos/p/jfe7ghdjd0/ud/cjpn/?partner_id=64068&utm_source=pdp&utm_medium=share',
     mkp: 'Magazine Luiza',
     status: false
   },
