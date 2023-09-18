@@ -437,7 +437,7 @@ const products = [
     price: 65.01,
     url: 'https://shopee.com.br/Caldeir%C3%A3o-Panela-Hotel-Industrial-N24-de-Alum%C3%ADnio-i.418199465.20627946483',
     mkp: 'Shopee',
-    status: false
+    status: true
   },
   {
     id: 50,
