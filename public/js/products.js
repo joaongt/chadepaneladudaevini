@@ -6,7 +6,7 @@ const products = [
     price: 49.99,
     url: 'https://shp.ee/5awwx48',
     mkp: 'Shopee',
-    status: false
+    status: true
   },
   {
     id: 2,
