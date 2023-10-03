@@ -311,7 +311,7 @@ const products = [
     price: 49.90,
     url: 'https://produto.mercadolivre.com.br/MLB-3427022082-jogo-6-tacas-vidro-260ml-diamond-transparente-_JM?matt_tool=81106094&matt_word=&matt_source=google&matt_campaign_id=14302215564&matt_ad_group_id=154967597508&matt_match_type=&matt_network=g&matt_device=c&matt_creative=649487315917&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=733029384&matt_product_id=MLB3427022082&matt_product_partition_id=1960857711113&matt_target_id=aud-1966919989813:pla-1960857711113&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5P5dQ2OWXw79sSwgv14kKm7Z25uzOP6K1eL_97hueUhA-YPF1jl14aAkF9EALw_wcB',
     mkp: 'Mercado Livre',
-    status: false
+    status: true
   },
   {
     id: 36,
