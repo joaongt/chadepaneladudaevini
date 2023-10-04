@@ -231,7 +231,7 @@ const products = [
     price: 419.90,
     url: 'https://www.madeiramadeira.com.br/rack-para-tv-ate-70-polegadas-220cm-3-gavetas-retro-manchester-yescasa-795198.html?origem=pla-795198',
     mkp: 'madeiramadeira',
-    status: false
+    status: true
   },
   {
     id: 27,
@@ -425,7 +425,7 @@ const products = [
   {
     id: 48,
     name: 'INDISPONÍVEL',
-    image: '/images/panelinhas.jpg',
+    image: '',
     price: 0,
     url: '',
     mkp: 'Magazine Luiza',
@@ -474,7 +474,7 @@ const products = [
     price: 99.90,
     url: 'https://britania.com.br/sanduicheira-e-grill-britania-bgr15pi-revestimento-em-ceramica-66701167/p',
     mkp: 'Britânia',
-    status: false
+    status: true
   },
   {
     id: 54,
