@@ -228,7 +228,7 @@ const products = [
     id: 26,
     name: 'Rack para TV até 70 Polegadas 220cm 3 Gavetas',
     image: '/images/rack.jpg',
-    price: 419.90,
+    price: 568.09,
     url: 'https://www.madeiramadeira.com.br/rack-para-tv-ate-70-polegadas-220cm-3-gavetas-retro-manchester-yescasa-795198.html?origem=pla-795198',
     mkp: 'madeiramadeira',
     status: true
