@@ -483,7 +483,7 @@ const products = [
     price: 99.90,
     url: 'https://britania.com.br/mini-processador-de-alimentos-britania-2pbritania/p',
     mkp: 'Britânia',
-    status: false
+    status: true
   },
   {
     id: 55,
