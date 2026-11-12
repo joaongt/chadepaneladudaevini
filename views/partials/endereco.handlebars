@@ -1,0 +1,44 @@
+<div class="address">
+    <dl class="address__fields">
+        <div class="address__row">
+            <dt>Destinatário</dt>
+            <dd>{{casal.endereco.destinatario}}</dd>
+            <button class="copy" data-copy="{{casal.endereco.destinatario}}" aria-label="Copiar destinatário"><i class='bx bx-copy'></i></button>
+        </div>
+        <div class="address__row">
+            <dt>CEP</dt>
+            <dd>{{casal.endereco.cep}}</dd>
+            <button class="copy" data-copy="{{casal.endereco.cep}}" aria-label="Copiar CEP"><i class='bx bx-copy'></i></button>
+        </div>
+        <div class="address__row">
+            <dt>Rua</dt>
+            <dd>{{casal.endereco.rua}}</dd>
+            <button class="copy" data-copy="{{casal.endereco.rua}}" aria-label="Copiar rua"><i class='bx bx-copy'></i></button>
+        </div>
+        <div class="address__row address__row--half">
+            <dt>Número</dt>
+            <dd>{{casal.endereco.numero}}</dd>
+            <button class="copy" data-copy="{{casal.endereco.numero}}" aria-label="Copiar número"><i class='bx bx-copy'></i></button>
+        </div>
+        {{#if casal.endereco.complemento}}
+        <div class="address__row address__row--half">
+            <dt>Complemento</dt>
+            <dd>{{casal.endereco.complemento}}</dd>
+            <button class="copy" data-copy="{{casal.endereco.complemento}}" aria-label="Copiar complemento"><i class='bx bx-copy'></i></button>
+        </div>
+        {{/if}}
+        <div class="address__row address__row--half">
+            <dt>Bairro</dt>
+            <dd>{{casal.endereco.bairro}}</dd>
+            <button class="copy" data-copy="{{casal.endereco.bairro}}" aria-label="Copiar bairro"><i class='bx bx-copy'></i></button>
+        </div>
+        <div class="address__row">
+            <dt>Cidade / UF</dt>
+            <dd>{{casal.endereco.cidade}} – {{casal.endereco.uf}}</dd>
+            <button class="copy" data-copy="{{casal.endereco.cidade}}" aria-label="Copiar cidade"><i class='bx bx-copy'></i></button>
+        </div>
+    </dl>
+    <button class="btn btn--outline btn--block copy-all" data-copy="{{enderecoCompleto}}">
+        <i class='bx bx-copy-alt'></i> Copiar endereço completo
+    </button>
+</div>

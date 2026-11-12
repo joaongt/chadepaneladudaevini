@@ -1,4 +1,8 @@
-const products = [
+// Lista de presentes.
+// Para marcar um presente como comprado, altere "status" para true.
+// Campos: id, name (nome), image (foto em /public/images), price (preço), url (link da loja), mkp (loja), status (já comprado?)
+
+module.exports = [
   {
     id: 1,
     name: 'Caixa Organizadora Preta',
@@ -230,7 +234,7 @@ const products = [
     image: '/images/rack.jpg',
     price: 568.09,
     url: 'https://www.madeiramadeira.com.br/rack-para-tv-ate-70-polegadas-220cm-3-gavetas-retro-manchester-yescasa-795198.html?origem=pla-795198',
-    mkp: 'madeiramadeira',
+    mkp: 'MadeiraMadeira',
     status: true
   },
   {
@@ -383,7 +387,7 @@ const products = [
     image: '/images/cam.jpg',
     price: 429.90,
     url: 'https://santistadecora.com.br/pr/kit-colcha-matelasse-dupla-face-platinum-thais/SA200KCQZ1THAIS',
-    mkp: 'santistadecora',
+    mkp: 'Santista Decora',
     status: false
   },
   {
@@ -392,7 +396,7 @@ const products = [
     image: '/images/banho.jpg',
     price: 12.90,
     url: 'https://santistadecora.com.br/pr/toalha-100-algodao-prata-mike/SANPRTROZMI8211',
-    mkp: 'santistadecora',
+    mkp: 'Santista Decora',
     status: false
   },
   {
@@ -504,298 +508,3 @@ const products = [
     status: false
   },
 ];
-
-const productContainer = document.getElementById('product-container');
-const Div = document.querySelector('.instruction-div');
-
-// Função para criar o elemento de produto
-function createProductElement(product) {
-  const li = document.createElement('li');
-  li.className = 'product-item';
-
-  const heart = document.createElement('i');
-  heart.className = 'bx bxs-heart';
-  li.appendChild(heart);
-
-
-  const image = document.createElement('img');
-  image.src = product.image;
-  image.alt = product.name;
-  image.className = 'product-image';
-  li.appendChild(image);
-
-  const pop = document.createElement('div');
-  pop.className = 'collum';
-  li.appendChild(pop);
-
-  const button = document.createElement('button');
-  button.textContent = 'Presentear';
-  button.className = 'product-button';
-  li.appendChild(button);
-
-  const productName = document.createElement('p');
-  productName.textContent = product.name;
-  productName.className = 'product-name';
-  pop.appendChild(productName);
-
-  const productPrice = document.createElement('p');
-  productPrice.textContent = `${product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
-  productPrice.className = 'product-price';
-  pop.appendChild(productPrice);
-
-  const productMkp = document.createElement('span');
-  productMkp.textContent = product.mkp;
-  productMkp.className = 'product-mkp';
-  pop.appendChild(productMkp);
-
-  // Verifica se o produto foi favoritado
-  let isFavorite = localStorage.getItem(`favorite-${product.id}`) === 'true';
-  if (isFavorite) {
-    heart.classList.add('red-heart');
-  }
-
-  // Adiciona o evento de clique ao ícone de coração
-  heart.addEventListener('click', function () {
-    if (!isFavorite) {
-      // O coração estava desmarcado, agora estamos marcando
-      heart.classList.add('red-heart');
-      localStorage.setItem(`favorite-${product.id}`, 'true');
-      isFavorite = true;
-    } else {
-      // O coração estava marcado, agora estamos desmarcando
-      heart.classList.remove('red-heart');
-      localStorage.removeItem(`favorite-${product.id}`);
-      isFavorite = false;
-    }
-  });
-
-  button.addEventListener('click', () => {
-    const divAviso = document.createElement('div');
-    divAviso.className = 'center';
-    divAviso.innerHTML = `
-      <div class="instruction-div">
-      <i class='bx bx-x'></i>
-          <h2>O que devo fazer após efetuar a compra?</h2>
-          <p>
-              1. Você enviará uma mensagem no whatsapp <a href="https://api.whatsapp.com/send?phone=31989878715" target="_blank">(31) 98987-8715</a> de nome João. Na mensagem coloque apenas o nome ou o site
-              do produto que você comprou.<br>
-              2. Exemplo: Olá, estou enviando essa mensagem para avisar que eu adiquiri o produto Caixa Organizadora Preta.
-          </p>
-          <h2>Qual é o endereço dos noivos?</h2>
-          <p>Rua João Camilo de Oliveira Torres, 830. Bairro Tupi - Cep: 31846-310
-              <button id="copyCepInput" onclick="copyCepToClipboard()"><i class='bx bx-copy'></i></button>
-          </p><br><br>
-          <center><p>Clique no botão "OK" para ser redirecionado a página do produto.</p></center>
-          <center><button id="okk">OK</button></center>
-      </div>
-
-      <script>
-      const Div = document.querySelector('.instruction-div');
-
-      </script>
-    })
-  `;
-
-    document.body.appendChild(divAviso);
-
-    const x = divAviso.querySelector('.bx-x');
-    x.addEventListener('click', () => {
-      divAviso.style.display = 'none';
-    });
-
-    const okk = divAviso.querySelector('#okk');
-    okk.addEventListener('click', () => {
-      divAviso.style.display = 'none';
-      window.open(product.url, '_blank');
-    });
-  });
-
-
-
-  if (product.status) {
-    const statusOverlay = document.createElement('div');
-    statusOverlay.className = 'status-overlay';
-    button.appendChild(statusOverlay);
-
-    const statusText = document.createElement('span');
-    statusText.textContent = 'JÁ ADQUIRIDO';
-    statusText.className = 'status-text';
-    product.url = ""; // Removendo a URL do produto
-    button.disabled = true; // Desabilitando o botão
-    // Altera o estilo do ponteiro quando passa sobre o botão
-    button.style.cursor = 'inherit';
-
-    statusOverlay.appendChild(statusText);
-  }
-
-  return li;
-}
-
-function copyCepToClipboard() {
-  // Seleciona o texto da chave PIX
-  const cepInput = document.createElement('input');
-  cepInput.value = "R. João Camilo de Oliveira Tôrres, 830 - Tupi, Belo Horizonte - MG, 31846-310";
-  document.body.appendChild(cepInput);
-  cepInput.select();
-  document.execCommand('copy');
-  document.body.removeChild(cepInput);
-
-  // Atualiza o texto do botão para indicar que foi copiado
-  const copyButton = document.getElementById('copyCepInput');
-  copyButton.innerHTML = '<i class="bx bxs-copy"></i>';
-  copyButton.disabled = true;
-}
-
-
-// Example usage:
-filterByMarketplace(products);
-
-const prevPageButton = document.getElementById('prev-page-button');
-const nextPageButton = document.getElementById('next-page-button');
-const pageNumbersContainer = document.getElementById('page-numbers-container');
-const productsPerPage = 9;
-let currentPage = 1;
-let filteredProducts = products; // Initialize with all products
-
-// Function to update the pagination buttons and page numbers
-function updatePagination() {
-  // Clear existing page numbers
-  pageNumbersContainer.innerHTML = '';
-
-  // Calculate total number of pages
-  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
-
-  // Create and append page number buttons
-  for (let i = 1; i <= totalPages; i++) {
-    const pageNumberButton = document.createElement('button');
-    pageNumberButton.textContent = i;
-    pageNumberButton.classList.add('page-number');
-    pageNumberButton.addEventListener('click', () => {
-      currentPage = i;
-      displayFilteredProducts();
-      updatePagination();
-    });
-    pageNumbersContainer.appendChild(pageNumberButton);
-  }
-
-  // Disable or enable previous and next buttons based on current page
-  prevPageButton.disabled = currentPage === 1;
-  nextPageButton.disabled = currentPage === totalPages;
-}
-
-// Function to display filtered products
-function displayFilteredProducts() {
-  const startIndex = (currentPage - 1) * productsPerPage;
-  const endIndex = startIndex + productsPerPage;
-  const currentProducts = filteredProducts.slice(startIndex, endIndex);
-  const productContainer = document.getElementById('product-container');
-  productContainer.innerHTML = ''; // Clear the existing products
-
-  currentProducts.forEach(product => {
-    const productElement = createProductElement(product);
-    productContainer.appendChild(productElement);
-  });
-}
-
-// Event listener for previous page button
-prevPageButton.addEventListener('click', () => {
-  if (currentPage > 1) {
-    currentPage--;
-    displayFilteredProducts();
-    updatePagination();
-  }
-});
-
-// Event listener for next page button
-nextPageButton.addEventListener('click', () => {
-  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
-  if (currentPage < totalPages) {
-    currentPage++;
-    displayFilteredProducts();
-    updatePagination();
-  }
-});
-
-
-// Function to filter products by price range
-function filterByPrice(sortOrder) {
-
-  if (sortOrder === 'lowToHigh') {
-    filteredProducts = products.slice().sort((a, b) => a.price - b.price);
-  } else if (sortOrder === 'highToLow') {
-    filteredProducts = products.slice().sort((a, b) => b.price - a.price);
-  } else {
-    filteredProducts = products.slice();
-  }
-
-  currentPage = 1; // Reset current page to 1
-  displayFilteredProducts(filteredProducts); // Call the function to display filtered products with pagination
-  updatePagination(); // Call the function to update the pagination
-}
-
-const filterPriceSelect = document.getElementById('filter-price');
-
-filterPriceSelect.addEventListener('change', () => {
-  const selectedPriceOption = filterPriceSelect.value;
-  filterByPrice(selectedPriceOption);
-});
-
-
-
-// Initial display of products
-displayFilteredProducts();
-updatePagination();
-
-const filterMkp = document.getElementById('filter-mkp');
-
-// Event listener for marketplace filter change
-filterMkp.addEventListener('change', () => {
-  const selectedMkp = filterMkp.value;
-  filterByMkp(selectedMkp);
-});
-
-// Function to filter products by marketplace
-function filterByMkp(mkp) {
-  if (mkp === 'all') {
-    filteredProducts = products; // Show all products
-  } else {
-    filteredProducts = products.filter(product => product.mkp === mkp);
-  }
-
-  currentPage = 1; // Reset current page to 1
-  displayFilteredProducts();
-  updatePagination();
-}
-
-function filterByMarketplace(products) {
-  // Extract unique marketplaces from the products array
-  const marketplaces = [...new Set(products.map(product => product.mkp))];
-
-  const divFilter = document.querySelector('.filters');
-
-  // Create HTML select element
-  const selectElement = document.createElement('select');
-  selectElement.id = 'filter-mkp';
-  divFilter.appendChild(selectElement);
-
-  // Create default option
-  const defaultOption = document.createElement('option');
-  defaultOption.value = '';
-  defaultOption.disabled = true;
-  defaultOption.selected = true;
-  defaultOption.textContent = 'Selecione um marketplace';
-  selectElement.appendChild(defaultOption);
-
-  const allOption = document.createElement('option');
-  allOption.value = 'all';
-  allOption.textContent = 'Todos';
-  selectElement.appendChild(allOption);
-
-  // Create options for each marketplace
-  marketplaces.forEach((marketplace) => {
-    const option = document.createElement('option');
-    option.value = marketplace;
-    option.textContent = marketplace;
-    selectElement.appendChild(option);
-  });
-}

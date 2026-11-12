@@ -1,0 +1,78 @@
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">{{casal.noiva}} &amp; {{casal.noivo}} · {{casal.dataExtenso}}</p>
+        <h1 class="page-hero__title">Lista de presentes</h1>
+        <p class="lead">Escolha um presente, compre direto na loja e envie para o endereço dos noivos. Depois é só nos avisar pelo WhatsApp. 💛</p>
+
+        <div class="progress-card progress-card--inline">
+            <div class="progress-card__top">
+                <span><strong>{{stats.comprados}}</strong> de {{stats.total}} presentes já escolhidos · <strong>{{stats.disponiveis}}</strong> disponíveis</span>
+                <span class="progress-card__pct">{{stats.percentual}}%</span>
+            </div>
+            <div class="progress"><div class="progress__bar" style="width: {{stats.percentual}}%"></div></div>
+        </div>
+
+        <div class="address-pill">
+            <i class='bx bx-map'></i>
+            <a href="/#endereco">Entrega: {{casal.endereco.bairro}}, {{casal.endereco.cidade}} – {{casal.endereco.uf}} · CEP {{casal.endereco.cep}}</a>
+            <button class="copy" data-copy="{{enderecoCompleto}}" aria-label="Copiar endereço completo"><i class='bx bx-copy'></i></button>
+        </div>
+    </div>
+</section>
+
+<section class="section section--tight">
+    <div class="container">
+        <div class="toolbar" id="toolbar">
+            <label class="search">
+                <i class='bx bx-search'></i>
+                <input type="search" id="f-search" placeholder="Buscar presente…" autocomplete="off">
+            </label>
+            <div class="toolbar__selects">
+                <label class="select">
+                    <span class="sr-only">Ordenar</span>
+                    <select id="f-sort">
+                        <option value="default">Ordenar: recomendados</option>
+                        <option value="asc">Menor preço</option>
+                        <option value="desc">Maior preço</option>
+                        <option value="name">Nome (A–Z)</option>
+                    </select>
+                </label>
+                <label class="select">
+                    <span class="sr-only">Faixa de preço</span>
+                    <select id="f-price">
+                        <option value="all">Todos os preços</option>
+                        <option value="0-100">Até R$ 100</option>
+                        <option value="100-250">R$ 100 a R$ 250</option>
+                        <option value="250-500">R$ 250 a R$ 500</option>
+                        <option value="500-999999">Acima de R$ 500</option>
+                    </select>
+                </label>
+                <label class="switch">
+                    <input type="checkbox" id="f-available">
+                    <span class="switch__track"></span>
+                    <span>Só disponíveis</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="chips" id="f-stores" role="group" aria-label="Filtrar por loja">
+            <button class="chip is-active" data-store="all">Todas as lojas</button>
+        </div>
+
+        <p class="results" id="results"></p>
+
+        <div class="gift-grid" id="gift-grid">
+            {{#each presentes}}
+            {{> presente}}
+            {{/each}}
+        </div>
+
+        <div class="empty" id="empty" hidden>
+            <i class='bx bx-gift'></i>
+            <p>Nenhum presente encontrado com esses filtros.</p>
+            <button class="btn btn--outline" id="f-clear">Limpar filtros</button>
+        </div>
+    </div>
+</section>
+
+<script src="/js/presentes.js"></script>
