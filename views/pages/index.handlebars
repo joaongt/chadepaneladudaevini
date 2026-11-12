@@ -1,54 +1,118 @@
-<div class="content">
-<div class="welcome-section">
-    <div class="header">
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/listshop">Lista de Presentes</a>
-        </li>
-    </div>
-    <div class="text">
-        <h1 class="welcome-h1">Eduarda &amp Vinicius</h1>
-        <h2 class="welcome-h2">6 DE OUTUBRO DE 2023</h2>
-    </div>
-    <div class="in">
-        <p class="welcome-p">Veja abaixo as instruções de como utilizar o site.</p>
+<section class="hero" style="--hero-img: url('{{casal.fotoCapa}}')">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+        <p class="eyebrow">Vamos nos casar</p>
+        <h1 class="hero__names">
+            <span>{{casal.noiva}}</span>
+            <em>&amp;</em>
+            <span>{{casal.noivo}}</span>
+        </h1>
+        <p class="hero__date">{{casal.dataExtenso}}</p>
 
-        <button id="instruction">Ver Instruções</button>
+        <div class="countdown" id="countdown" hidden>
+            <div><strong data-cd="d">0</strong><span>dias</span></div>
+            <div><strong data-cd="h">0</strong><span>horas</span></div>
+            <div><strong data-cd="m">0</strong><span>min</span></div>
+            <div><strong data-cd="s">0</strong><span>seg</span></div>
+        </div>
+
+        <div class="hero__actions">
+            <a href="/presentes" class="btn btn--light"><i class='bx bx-gift'></i> Ver lista de presentes</a>
+            <a href="#como-presentear" class="btn btn--ghost">Como funciona</a>
+        </div>
     </div>
+    <a href="#boas-vindas" class="hero__scroll" aria-label="Rolar para baixo"><i class='bx bx-chevron-down'></i></a>
+</section>
 
+<section class="section welcome" id="boas-vindas">
+    <div class="container narrow center">
+        <img class="monogram" src="/images/logodv.png" alt="Monograma do casal" width="96" height="96">
+        <h2 class="section__title">Bem-vindos ao nosso lar</h2>
+        <p class="lead">{{casal.mensagem}}</p>
 
-</div>
-<div class="center">
-    <div class="instruction-div">
-        <i class='bx bx-x'></i>
-        <h2>Como faço para comprar um presente para o casal?</h2>
-        <p>
-            1. Vá em LISTA DE COMPRAS e escolha o item que melhor combine com o seu estilo de presente.<br>
-            2. Agora que você já escolheu seu presente é necessário que faça a compra dele atraves do site indicado
-            na descrição do item ou em outro site que seja de sua preferência, é importante verificar se o item tem
-            as mesmas características antes de fazer a sua compra. Vale ressaltar que ficará ao seu critério se
-            desejar entregar esse presente em mãos ou colocar o endereço dos noivos direto na compra (O endereço dos
-            noivos está destacado abaixo).<br>
-            3. Pronto, se estiver nesse passo você já conseguiu comprar seu presente, mas, para manter o controle
-            dos presentes é importante você mandar uma mensagem via whatsapp conforme é explicado na próxima
-            pergunta 'O que devo fazer após efetuar a compra?'”.
-        </p>
-        <h2>O que devo fazer após efetuar a compra?</h2>
-        <p>
-            1. Você enviará uma mensagem no whatsapp (31) 98987-8715 de nome João. Na mensagem coloque apenas o nome e o
-            cod
-            do produto que você comprou.<br>
-            2. Exemplo: Olá, estou enviando essa mensagem para avisar que eu adiquiri o produto Caixa Organizadora Preta
-            com o cod 1.
-        </p>
-        <h2>Qual é o endereço dos noivos?</h2>
-        <p>Rua João Camilo de Oliveira Torres, 830. Bairro Tupi - Cep: 31846-310
-            <button id="copyCepInput" onclick="copyCepToClipboard()"><i class='bx bx-copy'></i></button>
-        </p>
+        <div class="progress-card">
+            <div class="progress-card__top">
+                <span><strong>{{stats.comprados}}</strong> de {{stats.total}} presentes já escolhidos</span>
+                <span class="progress-card__pct">{{stats.percentual}}%</span>
+            </div>
+            <div class="progress"><div class="progress__bar" style="width: {{stats.percentual}}%"></div></div>
+        </div>
     </div>
-</div>
+</section>
 
-</div>
-<script type="text/javascript" src="/js/handlers.js"></script>
+<section class="section steps-section" id="como-presentear">
+    <div class="container">
+        <p class="eyebrow center">Simples e rápido</p>
+        <h2 class="section__title center">Como presentear</h2>
+        <div class="steps">
+            <div class="step-card">
+                <span class="step-card__icon"><i class='bx bx-search-alt'></i></span>
+                <span class="step-card__num">01</span>
+                <h3>Escolha o presente</h3>
+                <p>Navegue pela lista, filtre por loja ou preço e escolha o item que combina com você.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-card__icon"><i class='bx bx-cart-alt'></i></span>
+                <span class="step-card__num">02</span>
+                <h3>Compre na loja online</h3>
+                <p>Clique em <strong>Presentear</strong> e você vai direto para o produto no marketplace (Shopee, Amazon, Magalu…).</p>
+            </div>
+            <div class="step-card">
+                <span class="step-card__icon"><i class='bx bx-map'></i></span>
+                <span class="step-card__num">03</span>
+                <h3>Entregue para os noivos</h3>
+                <p>No checkout, use o <a href="#endereco">endereço dos noivos</a> — ou, se preferir, entregue em mãos.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-card__icon"><i class='bx bxl-whatsapp'></i></span>
+                <span class="step-card__num">04</span>
+                <h3>Avise pelo WhatsApp</h3>
+                <p>Mande uma mensagem rápida para {{casal.whatsapp.nome}} com o nome do presente. Assim ninguém compra repetido.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section address-section" id="endereco">
+    <div class="container address-grid">
+        <div>
+            <p class="eyebrow">Entrega dos presentes</p>
+            <h2 class="section__title">Endereço dos noivos</h2>
+            <p class="lead">Copie cada campo com um clique e cole direto no formulário de entrega da loja.</p>
+            <p class="address__full"><i class='bx bx-home-heart'></i> {{enderecoCompleto}}</p>
+            <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query={{urlencode enderecoCompleto}}" target="_blank" rel="noopener">
+                <i class='bx bx-map-alt'></i> Ver no mapa
+            </a>
+        </div>
+        <div class="card">
+            {{> endereco}}
+        </div>
+    </div>
+</section>
+
+{{#if destaques.length}}
+<section class="section featured">
+    <div class="container">
+        <div class="section__head">
+            <div>
+                <p class="eyebrow">Ainda disponíveis</p>
+                <h2 class="section__title">Alguns presentes da lista</h2>
+            </div>
+            <a href="/presentes" class="link-arrow">Ver todos os {{stats.disponiveis}} disponíveis <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+        <div class="gift-grid">
+            {{#each destaques}}
+            {{> presente}}
+            {{/each}}
+        </div>
+    </div>
+</section>
+{{/if}}
+
+<section class="section cta">
+    <div class="container narrow center">
+        <h2 class="section__title">Ficou com alguma dúvida?</h2>
+        <p class="lead">Fale com {{casal.whatsapp.nome}} pelo WhatsApp {{casal.whatsapp.exibicao}}.</p>
+        <a class="btn btn--whatsapp" href="{{whatsappLink}}" target="_blank" rel="noopener"><i class='bx bxl-whatsapp'></i> Chamar no WhatsApp</a>
+    </div>
+</section>

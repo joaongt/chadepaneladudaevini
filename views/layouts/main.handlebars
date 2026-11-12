@@ -3,34 +3,114 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/{{estilo}}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="/images/logodv.png">
+    <meta name="description" content="Lista de presentes de casamento de {{casal.noiva}} & {{casal.noivo}}">
+    <meta name="theme-color" content="#f8f5f0">
+    <meta property="og:title" content="{{casal.noiva}} & {{casal.noivo}} — Lista de Presentes">
+    <meta property="og:description" content="Escolha um presente, compre direto na loja e envie para o endereço dos noivos.">
+    <meta property="og:image" content="{{casal.fotoCapa}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/logodv.png">
     <title>{{titulo}}</title>
 </head>
 
-<body>
-    <div class="container">
+<body class="page-{{pagina}}">
 
-            <!-- Conteúdo principal da página -->
-            {{{body}}}
-
-
-        <footer class="footer">
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/listshop">Lista de Presentes</a>
-            </div>
-            <div class="whatsapp-contact">
-                <a href="https://api.whatsapp.com/send?phone=31989878715" target="_blank">
-                    <img src="/images/zapzap.png" alt="Ícone do WhatsApp">
-                    Contato pelo WhatsApp para dúvidas
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="/" class="nav__brand" aria-label="Início">
+                <img src="/images/logodv.png" alt="" width="36" height="36">
+                <span>{{casal.noiva}} <em>&amp;</em> {{casal.noivo}}</span>
+            </a>
+            <nav class="nav__links" aria-label="Principal">
+                <a href="/" class="{{#if (eq pagina 'home')}}is-active{{/if}}">Início</a>
+                <a href="/#como-presentear">Como presentear</a>
+                <a href="/#endereco">Endereço</a>
+                <a href="/presentes" class="btn btn--small {{#if (eq pagina 'presentes')}}is-active{{/if}}">
+                    <i class='bx bx-gift'></i> Lista de presentes
                 </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{{body}}}
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__names">{{casal.noiva}} <em>&amp;</em> {{casal.noivo}}</p>
+            <p class="footer__date">{{casal.dataExtenso}}</p>
+            <div class="footer__links">
+                <a href="/">Início</a>
+                <a href="/presentes">Lista de presentes</a>
+                <a href="/#endereco">Endereço de entrega</a>
             </div>
-        </footer>
-        
+            <a class="btn btn--whatsapp" href="{{whatsappLink}}" target="_blank" rel="noopener">
+                <i class='bx bxl-whatsapp'></i> Dúvidas? Fale com {{casal.whatsapp.nome}}
+            </a>
+            <p class="footer__love">Feito com <i class='bx bxs-heart'></i> para o nosso grande dia</p>
+        </div>
+    </footer>
+
+    <!-- Modal: comprar presente -->
+    <div class="modal" id="gift-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal__backdrop" data-close></div>
+        <div class="modal__panel">
+            <button class="modal__close" data-close aria-label="Fechar"><i class='bx bx-x'></i></button>
+
+            <div class="modal__product">
+                <img id="modal-img" src="" alt="">
+                <div>
+                    <span class="tag" id="modal-store"></span>
+                    <h3 id="modal-title"></h3>
+                    <p class="modal__price" id="modal-price"></p>
+                </div>
+            </div>
+
+            <ol class="modal__steps">
+                <li>
+                    <span class="step-num">1</span>
+                    <div class="step-body">
+                        <h4>Copie o endereço dos noivos</h4>
+                        <p>Use-o como endereço de entrega no carrinho da loja.</p>
+                        {{> endereco}}
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <div class="step-body">
+                        <h4>Compre na loja</h4>
+                        <p>Confira se o item tem as mesmas características (cor, tamanho e voltagem).</p>
+                        <a class="btn btn--primary btn--block" id="modal-buy" href="#" target="_blank" rel="noopener">
+                            <i class='bx bx-shopping-bag'></i> <span>Ir para a loja</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <div class="step-body">
+                        <h4>Avise que você presenteou</h4>
+                        <p>Assim marcamos o item como “já presenteado” e ninguém compra repetido.</p>
+                        <a class="btn btn--whatsapp btn--block" id="modal-whats" href="#" target="_blank" rel="noopener">
+                            <i class='bx bxl-whatsapp'></i> Avisar pelo WhatsApp
+                        </a>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+        window.CASAMENTO = {{{json casal}}};
+    </script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

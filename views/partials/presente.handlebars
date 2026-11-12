@@ -1,0 +1,24 @@
+<article class="gift {{#if status}}is-bought{{/if}}"
+    data-id="{{id}}" data-name="{{name}}" data-price="{{price}}" data-store="{{mkp}}"
+    data-url="{{url}}" data-image="{{image}}" data-bought="{{#if status}}1{{else}}0{{/if}}">
+    <div class="gift__media">
+        <img src="{{image}}" alt="{{name}}" loading="lazy">
+        <span class="gift__store">{{mkp}}</span>
+        {{#if status}}
+        <span class="gift__badge"><i class='bx bxs-check-circle'></i> Já presenteado</span>
+        {{/if}}
+    </div>
+    <div class="gift__body">
+        <h3 class="gift__name">{{name}}</h3>
+        <p class="gift__price">{{formatCurrency price}}</p>
+        {{#if status}}
+        <button class="btn btn--muted btn--block" disabled>
+            <i class='bx bx-heart'></i> Obrigado!
+        </button>
+        {{else}}
+        <button class="btn btn--primary btn--block" data-gift>
+            <i class='bx bx-gift'></i> Presentear
+        </button>
+        {{/if}}
+    </div>
+</article>
